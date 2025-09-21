@@ -2,6 +2,8 @@ site_name: newbies博客站
 theme:
   name: material
   language: zh
-nav:
-  - 首页: index.md
+# nav:
+#   - 首页: index.md
+
+
   
