@@ -1,12 +1,11 @@
-
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
+        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/">
       
       
         <link rel="prev" href="../kernel%E5%90%AF%E5%8A%A8/">
@@ -14,6 +13,9 @@
       
         <link rel="next" href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
       
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
@@ -38,7 +40,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,7 +52,17 @@
     
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     <body dir="ltr">
@@ -81,12 +93,12 @@
     <a href="../.." title="newbies博客站" class="md-header__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,7 +126,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -123,15 +135,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
         
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -167,7 +179,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -179,7 +191,7 @@
     <a href="../.." title="newbies博客站" class="md-nav__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     newbies博客站
@@ -224,7 +236,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -338,7 +350,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -452,10 +464,103 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -468,8 +573,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Cmake
           </label>
@@ -566,10 +671,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -582,8 +687,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Lib
           </label>
@@ -682,10 +787,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -698,8 +803,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Linux启动流程
           </label>
@@ -911,10 +1016,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -927,8 +1032,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Linux驱动
           </label>
@@ -949,10 +1054,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1">
         
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
             
   
   
@@ -965,8 +1070,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
             <span class="md-nav__icon md-icon"></span>
             1.ATK 6ull环境配置
           </label>
@@ -1179,10 +1284,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2">
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
             
   
   
@@ -1195,8 +1300,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             2.ATK 6ull驱动
           </label>
@@ -1324,10 +1429,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -1340,8 +1445,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Lvgl
           </label>
@@ -1461,10 +1566,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10">
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   
@@ -1477,8 +1582,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             N8n
           </label>
@@ -1667,10 +1772,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11">
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   
@@ -1683,8 +1788,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Nordic
           </label>
@@ -1735,10 +1840,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   
@@ -1751,8 +1856,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Openwrt
           </label>
@@ -1918,10 +2023,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13">
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -1934,8 +2039,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Other
           </label>
@@ -2009,10 +2114,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14">
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -2025,8 +2130,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             St67w61
           </label>
@@ -2146,10 +2251,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15">
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
             
   
   
@@ -2162,8 +2267,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             Stm32 cmake
           </label>
@@ -2375,10 +2480,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16">
         
           
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
             
   
   
@@ -2391,8 +2496,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -3064,10 +3169,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17">
         
           
-          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
             
   
   
@@ -3080,8 +3185,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_16">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             Yolo
           </label>
@@ -3132,10 +3237,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18">
         
           
-          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
             
   
   
@@ -3148,8 +3253,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             Zephyr
           </label>
@@ -3170,10 +3275,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_1">
         
           
-          <label class="md-nav__link" for="__nav_17_1" id="__nav_17_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_1" id="__nav_18_1_label" tabindex="0">
             
   
   
@@ -3186,8 +3291,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_1">
             <span class="md-nav__icon md-icon"></span>
             1.zephyr环境搭建
           </label>
@@ -3262,10 +3367,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_2">
         
           
-          <label class="md-nav__link" for="__nav_17_2" id="__nav_17_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_2" id="__nav_18_2_label" tabindex="0">
             
   
   
@@ -3278,8 +3383,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_2">
             <span class="md-nav__icon md-icon"></span>
             2.zephyr创建boards
           </label>
@@ -3354,10 +3459,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_3">
         
           
-          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_3" id="__nav_18_3_label" tabindex="0">
             
   
   
@@ -3370,8 +3475,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_3">
             <span class="md-nav__icon md-icon"></span>
             3.zephyr通用基础
           </label>
@@ -3706,10 +3811,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19">
         
           
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
             
   
   
@@ -3722,8 +3827,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_18">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             先辑
           </label>
@@ -3774,10 +3879,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20">
         
           
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
             
   
   
@@ -3790,8 +3895,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
             <span class="md-nav__icon md-icon"></span>
             全志v853音视频开发
           </label>
@@ -3973,10 +4078,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_8">
         
           
-          <label class="md-nav__link" for="__nav_19_8" id="__nav_19_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_8" id="__nav_20_8_label" tabindex="0">
             
   
   
@@ -3989,8 +4094,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_8">
             <span class="md-nav__icon md-icon"></span>
             全志原厂sdk
           </label>
@@ -4111,10 +4216,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_9">
         
           
-          <label class="md-nav__link" for="__nav_19_9" id="__nav_19_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_9" id="__nav_20_9_label" tabindex="0">
             
   
   
@@ -4127,8 +4232,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_9">
             <span class="md-nav__icon md-icon"></span>
             音视频基础概念
           </label>
@@ -4210,10 +4315,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21">
         
           
-          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
             
   
   
@@ -4226,8 +4331,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_20">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
             <span class="md-nav__icon md-icon"></span>
             聆思科技
           </label>
@@ -4301,10 +4406,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22">
         
           
-          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
             
   
   
@@ -4317,8 +4422,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_21">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
             <span class="md-nav__icon md-icon"></span>
             视频总结方案
           </label>
@@ -4484,10 +4589,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23">
         
           
-          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
             
   
   
@@ -4500,8 +4605,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_22">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
             <span class="md-nav__icon md-icon"></span>
             视频翻译方案
           </label>
@@ -4552,10 +4657,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24">
         
           
-          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
             
   
   
@@ -4568,8 +4673,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_23">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
             <span class="md-nav__icon md-icon"></span>
             迅为3568
           </label>
@@ -4981,7 +5086,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5078,7 +5183,7 @@
 <li>然后要将内核以及根文件系统加载到内存的什么位置</li>
 <li>文件系统是由内核加载到ram还是uboot加载到ram?</li>
 </ul>
-<h2 id="1-rambootromuboot">问题1. ram是由bootrom区域的代码初始化还是uboot初始化</h2>
+<h2 id="1-rambootromuboot">问题1. ram是由bootrom区域的代码初始化还是uboot初始化<a class="headerlink" href="#1-rambootromuboot" title="Permanent link">¶</a></h2>
 <p><strong>RAM（DRAM/SRAM）的初始化分阶段：</strong></p>
 <ol>
 <li>
@@ -5111,7 +5216,7 @@
 </li>
 <li>U-Boot就可以在更大更快的内存空间里运行，加载内核、dtb等。</li>
 </ol>
-<hr />
+<hr>
 <p><strong>整体流程（举例说明）</strong></p>
 <p>以常见ARM Cortex-A芯片为例：</p>
 <ol>
@@ -5128,13 +5233,13 @@
 </li>
 <li><strong>外部RAM的初始化通常是在SPL完成的！</strong></li>
 </ol>
-<hr />
+<hr>
 <p><strong>特殊情况</strong></p>
 <ul>
 <li>有的单片机/SoC有“引导RAM”或“on-chip RAM”足够大，BootROM阶段可以直接初始化外部RAM，这种情况下就没有SPL/TPL。</li>
 <li>极简系统（无DDR/只有SRAM）直接BootROM后进U-Boot。</li>
 </ul>
-<hr />
+<hr>
 <p><strong>总结</strong></p>
 <ul>
 <li><strong>RAM（外部DRAM）通常是由U-Boot的SPL阶段初始化的。</strong></li>
@@ -5143,7 +5248,7 @@
 <li>main U-Boot 之后就能任意用大RAM了。</li>
 <li><strong>只有部分简单芯片，BootROM就能初始化外部RAM。绝大部分SoC，都依赖SPL来完成DRAM初始化。</strong></li>
 </ul>
-<h2 id="2-ubootram">问题2 .uboot只是加载内核文件到ram么，文件系统呢？</h2>
+<h2 id="2-ubootram">问题2 .uboot只是加载内核文件到ram么，文件系统呢？<a class="headerlink" href="#2-ubootram" title="Permanent link">¶</a></h2>
 <p><strong>文件系统（rootfs）是由内核挂载的，而不是由U-Boot加载到RAM的。</strong></p>
 <ol>
 <li>
@@ -5184,13 +5289,13 @@
 <li>根据bootargs，挂载根文件系统（rootfs），比如<code>/dev/mmcblk0p2</code>。</li>
 <li>rootfs开始生效，进入用户空间（init进程）。</li>
 </ol>
-<hr />
+<hr>
 <p><strong>总结一句话</strong></p>
 <ul>
 <li><strong>根文件系统（rootfs）是内核挂载的，不是U-Boot加载到RAM的。</strong></li>
 <li><strong>U-Boot只负责把内核、dtb、initramfs等文件加载到RAM。根文件系统通常仍然在存储设备（flash、SD、eMMC等）的分区里，内核挂载时才访问。</strong></li>
 </ul>
-<h2 id="3-bootloaderu-bootram">问题3 “bootloader（如U-Boot）从哪里找到内核、加载到RAM哪里、这些信息哪里配置的？”</h2>
+<h2 id="3-bootloaderu-bootram">问题3 “bootloader（如U-Boot）从哪里找到内核、加载到RAM哪里、这些信息哪里配置的？”<a class="headerlink" href="#3-bootloaderu-bootram" title="Permanent link">¶</a></h2>
 <ol>
 <li><strong>U-Boot 如何“找到”内核映像的位置？</strong></li>
 </ol>
@@ -5201,7 +5306,8 @@
 </li>
 <li>
 <p>比如 SD卡、eMMC 有 FAT/ext4 文件系统，U-Boot 支持命令：</p>
-<p><code>fatload mmc 0:1 0x80000000 zImage</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>fatload mmc 0:1 0x80000000 zImage
+</span></code></pre></div></td></tr></tbody></table></div>
 <p>含义：</p>
 <ul>
 <li><code>fatload</code>：用FAT文件系统读文件</li>
@@ -5221,7 +5327,8 @@
 </li>
 <li>
 <p>用命令如：</p>
-<p><code>nand read 0x80000000 0x200000 0x800000</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>nand read 0x80000000 0x200000 0x800000
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li><code>nand read</code>：从NAND flash读</li>
 <li><code>0x80000000</code>：加载到RAM的0x80000000地址</li>
@@ -5233,7 +5340,7 @@
 <p>这种是“裸数据分区”，无文件名。</p>
 </li>
 </ul>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>U-Boot 如何决定“加载到RAM哪里”？</strong></p>
@@ -5255,11 +5362,12 @@
 <p>在 U-Boot 命令行/脚本里引用这些变量：</p>
 </li>
 </ol>
-<p><code>fatload mmc 0:1 ${kernel_addr_r} zImage</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>fatload mmc 0:1 ${kernel_addr_r} zImage
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li><strong>这些变量可以在 U-Boot 编译配置文件（如 board-specific defconfig、include/configs/xxx.h），也可以在 runtime 通过环境变量设置。</strong></li>
 </ul>
-<hr />
+<hr>
 <ol>
 <li><strong>这些信息在U-Boot源码哪里配置？</strong></li>
 </ol>
@@ -5267,10 +5375,14 @@
 <ul>
 <li>许多常用地址在 <code>include/configs/你的板子名.h</code> 文件中定义，例如：</li>
 </ul>
-<p><code>#define CONFIG_SYS_LOAD_ADDR        0x80000000
-  #define CONFIG_KERNEL_ADDR_R        0x80000000
-  #define CONFIG_FDT_ADDR_R           0x83000000
-  #define CONFIG_RAMDISK_ADDR_R       0x88000000</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>#define CONFIG_SYS_LOAD_ADDR        0x80000000
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>#define CONFIG_KERNEL_ADDR_R        0x80000000
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>#define CONFIG_FDT_ADDR_R           0x83000000
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>#define CONFIG_RAMDISK_ADDR_R       0x88000000
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>这些宏在编译时生效，影响默认环境变量。</li>
 </ul>
@@ -5278,7 +5390,8 @@
 <ul>
 <li>可以在 SD 卡、NAND 分区中存放环境变量脚本（如<code>bootcmd</code>），如：</li>
 </ul>
-<p><code>setenv bootcmd 'fatload mmc 0:1 ${kernel_addr_r} zImage; bootz ${kernel_addr_r} - ${fdt_addr_r}'</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>setenv bootcmd 'fatload mmc 0:1 ${kernel_addr_r} zImage; bootz ${kernel_addr_r} - ${fdt_addr_r}'
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>这些脚本常在量产镜像里自动配置。</li>
 </ul>
@@ -5286,8 +5399,9 @@
 <ul>
 <li>可以直接在U-Boot命令行手动运行命令：</li>
 </ul>
-<p><code>fatload mmc 0:1 0x80000000 zImage</code></p>
-<hr />
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>fatload mmc 0:1 0x80000000 zImage
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
 <ol>
 <li>
 <p><strong>你可以通过 U-Boot 命令 <code>printenv</code> 查看当前环境变量</strong></p>
@@ -5296,9 +5410,11 @@
 <p>比如：</p>
 </li>
 </ol>
-<p><code>=&gt; printenv kernel_addr_r
-  kernel_addr_r=0x80000000</code></p>
-<hr />
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>=&gt; printenv kernel_addr_r
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>kernel_addr_r=0x80000000
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
 <ol>
 <li>
 <p><strong>总结归纳</strong></p>
@@ -5312,7 +5428,7 @@
 <li><strong>U-Boot启动脚本</strong> 决定整个启动流程。</li>
 <li><strong>你板子的U-Boot源码目录下 configs、include/configs/ 下的头文件，以及分区里的uEnv.txt、boot.cmd，就是这些“入口”。</strong></li>
 </ol>
-<h2 id="4-flashram">问题4  既然是内核将文件系统从flash挂载到ram上，那么如何配置，从哪里找以及加载到哪里？</h2>
+<h2 id="4-flashram">问题4  既然是内核将文件系统从flash挂载到ram上，那么如何配置，从哪里找以及加载到哪里？<a class="headerlink" href="#4-flashram" title="Permanent link">¶</a></h2>
 <p><strong>内核通过驱动访问flash上的文件系统，用户操作文件时按需读取一部分到ram中</strong>（利用页缓存等机制）</p>
 <p><strong>常见的 rootfs（如 ext4，squashfs，jffs2 等）加载方式</strong></p>
 <p><strong>加载流程与配置</strong></p>
@@ -5323,18 +5439,25 @@
 </li>
 <li>
 <p>例如：</p>
-<p><code>root=/dev/mmcblk0p2         # SD卡第二分区
-root=/dev/nandc             # NAND的某个分区
-root=/dev/mtdblock4         # MTD块设备
-root=LABEL=rootfs           # 按标签挂载
-root=PARTUUID=xxxx-xxxx     # 按UUID挂载</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>root=/dev/mmcblk0p2         # SD卡第二分区
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>root=/dev/nandc             # NAND的某个分区
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>root=/dev/mtdblock4         # MTD块设备
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>root=LABEL=rootfs           # 按标签挂载
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>root=PARTUUID=xxxx-xxxx     # 按UUID挂载
+</span></code></pre></div></td></tr></tbody></table></div>
 </li>
 <li>
 <p>这些参数<strong>由U-Boot在启动时传递</strong>，通过环境变量配置。例如：</p>
 </li>
 </ul>
-<p><code>setenv bootargs "console=ttyS0,115200 root=/dev/mmcblk0p2 rootfstype=ext4 rw"
-  bootz ${kernel_addr_r} - ${fdt_addr_r}</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>setenv bootargs "console=ttyS0,115200 root=/dev/mmcblk0p2 rootfstype=ext4 rw"
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>bootz ${kernel_addr_r} - ${fdt_addr_r}
+</span></code></pre></div></td></tr></tbody></table></div>
 <p><strong>B. 内核怎么“加载”文件系统？</strong></p>
 <ul>
 <li>内核启动后会<strong>初始化块设备驱动、MTD驱动等</strong>，通过<code>root=</code>参数去挂载指定的设备为<code>/</code>根文件系统。</li>
@@ -5356,7 +5479,8 @@ root=PARTUUID=xxxx-xxxx     # 按UUID挂载</code></p>
 <ul>
 <li>通过bootargs（通常是setenv命令）配置rootfs的挂载位置，比如</li>
 </ul>
-<p><code>setenv bootargs "root=/dev/mmcblk0p2 rootfstype=ext4 rw"</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>setenv bootargs "root=/dev/mmcblk0p2 rootfstype=ext4 rw"
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>也可以写到环境变量脚本或uEnv.txt、boot.cmd等文件。</li>
 </ul>
@@ -5364,24 +5488,30 @@ root=PARTUUID=xxxx-xxxx     # 按UUID挂载</code></p>
 <ul>
 <li>启动时自动挂载为<code>/</code>，不是整体加载，只是访问文件时从flash读取数据到RAM。</li>
 </ul>
-<hr />
+<hr>
 <p><strong>举个完整例子：SD卡启动的嵌入式Linux</strong></p>
 <ul>
 <li>分区表：</li>
 </ul>
-<p><code>mmcblk0p1   FAT32    /boot       （内核zImage, dtb等）
-  mmcblk0p2   ext4     /           （rootfs）</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a>mmcblk0p1   FAT32    /boot       （内核zImage, dtb等）
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>mmcblk0p2   ext4     /           （rootfs）
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>U-Boot命令/脚本:</li>
 </ul>
-<p><code>setenv bootargs "console=ttyS0,115200 root=/dev/mmcblk0p2 rootfstype=ext4 rw"
-  fatload mmc 0:1 ${kernel_addr_r} zImage
-  fatload mmc 0:1 ${fdt_addr_r} xxx.dtb
-  bootz ${kernel_addr_r} - ${fdt_addr_r}</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a>setenv bootargs "console=ttyS0,115200 root=/dev/mmcblk0p2 rootfstype=ext4 rw"
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a>fatload mmc 0:1 ${kernel_addr_r} zImage
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a>fatload mmc 0:1 ${fdt_addr_r} xxx.dtb
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a>bootz ${kernel_addr_r} - ${fdt_addr_r}
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>启动后 <code>/</code> 就是你烧录进 mmcblk0p2 里的ext4 rootfs内容，文件按需读入RAM。</li>
 </ul>
-<h2 id="5">问题5：内核和文件系统是否可以存在同一个分区？</h2>
+<h2 id="5">问题5：内核和文件系统是否可以存在同一个分区？<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p><strong>嵌入式Linux主流做法（通常是分开分区）</strong></p>
@@ -5394,12 +5524,14 @@ root=PARTUUID=xxxx-xxxx     # 按UUID挂载</code></p>
 </li>
 <li>
 <p>例如：</p>
-<p><code>mmcblk0p1  FAT32    /boot      (内核、设备树、可能还有U-Boot、ramdisk)
-mmcblk0p2  ext4     /          (根文件系统)</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a>mmcblk0p1  FAT32    /boot      (内核、设备树、可能还有U-Boot、ramdisk)
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a>mmcblk0p2  ext4     /          (根文件系统)
+</span></code></pre></div></td></tr></tbody></table></div>
 <p>启动时U-Boot从p1加载zImage、dtb到RAM，然后内核挂载p2为/。</p>
 </li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>PC/服务器通用Linux（常在同一分区）</strong></p>
@@ -5410,7 +5542,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 <li><code>/boot</code> 目录下存放内核（vmlinuz、initrd、dtb等），根文件系统同分区下的其他目录如 <code>/etc /usr /lib</code>。</li>
 <li>文件系统类型通常是ext4、xfs等。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>为什么嵌入式常常分开？</strong></p>
@@ -5420,7 +5552,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 <li>支持多系统/备份分区/故障恢复（A/B分区方案）。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>也有特殊情况，内核和rootfs在同一分区</strong></p>
@@ -5430,7 +5562,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 <li>或者只有一个大分区，/boot、/ 都在一起，U-Boot/extlinux都能读。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>实际使用时如何决定？</strong></p>
@@ -5440,7 +5572,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 <li><strong>开发板/桌面系统</strong>：可以在一个分区里，方便部署。</li>
 </ol>
-<hr />
+<hr>
 <p><strong>总结表格：</strong></p>
 <table>
 <thead>
@@ -5468,7 +5600,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </tr>
 </tbody>
 </table>
-<h2 id="6">问题6：分区表的概念</h2>
+<h2 id="6">问题6：分区表的概念<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
 <ol>
 <li>
 <p><strong>分区表是什么？</strong></p>
@@ -5478,7 +5610,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 <li>有了分区表，操作系统、bootloader等才能知道每个分区存放的是什么内容（比如 bootloader、内核、rootfs、数据区等），并正确地访问和管理它们。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>分区表的作用</strong></p>
@@ -5488,7 +5620,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 <li>操作系统和bootloader根据分区表“找分区、找文件”，实现升级、备份、安全、权限隔离等功能。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li><strong>常见的分区表类型</strong></li>
 </ol>
@@ -5514,14 +5646,20 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 </ul>
 <p><strong>一个标准SD卡（用MBR分区）分区表：</strong></p>
-<pre><code>sql复制编辑|--------|---------------------|--------------------|--------------------|
-| 分区号 | 起始扇区            | 分区大小           | 用途               |
-|--------|---------------------|--------------------|--------------------|
-|   1    | 2048 (1MB)          | 256MB              | boot (FAT32)       |
-|   2    | 526336              | 15GB               | rootfs (ext4)      |
-|   3    | ...                 | ...                | data/user (ext4)   |
-|--------|---------------------|--------------------|--------------------|
-</code></pre>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a>sql复制编辑|--------|---------------------|--------------------|--------------------|
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a>| 分区号 | 起始扇区            | 分区大小           | 用途               |
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>|--------|---------------------|--------------------|--------------------|
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a>|   1    | 2048 (1MB)          | 256MB              | boot (FAT32)       |
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a>|   2    | 526336              | 15GB               | rootfs (ext4)      |
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a>|   3    | ...                 | ...                | data/user (ext4)   |
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a>|--------|---------------------|--------------------|--------------------|
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>第一个分区：放内核、dtb、u-boot等启动文件。</li>
 <li>第二个分区：放根文件系统。</li>
@@ -5531,11 +5669,12 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 <ul>
 <li>有些NAND/NOR flash没有标准分区表，用<code>mtdparts</code>参数配置：</li>
 </ul>
-<p><code>mtdparts=nand0:1M(bootloader),5M(kernel),16M(rootfs),-(data)</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a>mtdparts=nand0:1M(bootloader),5M(kernel),16M(rootfs),-(data)
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>各分区按偏移、大小划分，内核、bootloader、应用各用一块。</li>
 </ul>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>怎么查看和编辑分区表？</strong></p>
@@ -5545,7 +5684,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 <li>嵌入式开发时，经常用厂商工具、命令行脚本、烧录镜像配置分区表。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>分区表的物理结构</strong></p>
@@ -5555,7 +5694,7 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
 </li>
 <li><strong>GPT</strong>：第一个扇区是保护MBR，后面多个扇区是分区头和分区项。</li>
 </ol>
-<hr />
+<hr>
 <p>总结</p>
 <ul>
 <li><strong>分区表就是告诉系统/bootloader：“哪些区域分别做什么用，起始和大小是多少”</strong></li>
@@ -5597,6 +5736,19 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
   
 </div>
       
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/rss.xml" target="_blank" rel="noopener" title="订阅 RSS" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"></path></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -5609,11 +5761,13 @@ mmcblk0p2  ext4     /          (根文件系统)</code></p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,12 +1,11 @@
-
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
+        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/buildroot%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%B6%E4%BD%9C/">
       
       
         <link rel="prev" href="../../lib/3.miniz%E5%8E%8B%E7%BC%A9%E5%BA%93%E4%BD%BF%E7%94%A8/">
@@ -14,6 +13,9 @@
       
         <link rel="next" href="../busybox%E5%88%B6%E4%BD%9C%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
       
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
@@ -38,7 +40,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,7 +52,17 @@
     
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     <body dir="ltr">
@@ -81,12 +93,12 @@
     <a href="../.." title="newbies博客站" class="md-header__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,7 +126,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -123,15 +135,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
         
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -167,7 +179,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -179,7 +191,7 @@
     <a href="../.." title="newbies博客站" class="md-nav__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     newbies博客站
@@ -224,7 +236,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -338,7 +350,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -452,10 +464,103 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -468,8 +573,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Cmake
           </label>
@@ -566,10 +671,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -582,8 +687,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Lib
           </label>
@@ -682,10 +787,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -698,8 +803,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Linux启动流程
           </label>
@@ -960,10 +1065,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -976,8 +1081,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Linux驱动
           </label>
@@ -998,10 +1103,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1">
         
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
             
   
   
@@ -1014,8 +1119,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
             <span class="md-nav__icon md-icon"></span>
             1.ATK 6ull环境配置
           </label>
@@ -1228,10 +1333,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2">
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
             
   
   
@@ -1244,8 +1349,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             2.ATK 6ull驱动
           </label>
@@ -1373,10 +1478,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -1389,8 +1494,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Lvgl
           </label>
@@ -1510,10 +1615,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10">
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   
@@ -1526,8 +1631,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             N8n
           </label>
@@ -1716,10 +1821,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11">
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   
@@ -1732,8 +1837,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Nordic
           </label>
@@ -1784,10 +1889,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   
@@ -1800,8 +1905,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Openwrt
           </label>
@@ -1967,10 +2072,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13">
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -1983,8 +2088,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Other
           </label>
@@ -2058,10 +2163,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14">
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -2074,8 +2179,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             St67w61
           </label>
@@ -2195,10 +2300,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15">
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
             
   
   
@@ -2211,8 +2316,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             Stm32 cmake
           </label>
@@ -2424,10 +2529,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16">
         
           
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
             
   
   
@@ -2440,8 +2545,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -3113,10 +3218,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17">
         
           
-          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
             
   
   
@@ -3129,8 +3234,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_16">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             Yolo
           </label>
@@ -3181,10 +3286,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18">
         
           
-          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
             
   
   
@@ -3197,8 +3302,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             Zephyr
           </label>
@@ -3219,10 +3324,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_1">
         
           
-          <label class="md-nav__link" for="__nav_17_1" id="__nav_17_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_1" id="__nav_18_1_label" tabindex="0">
             
   
   
@@ -3235,8 +3340,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_1">
             <span class="md-nav__icon md-icon"></span>
             1.zephyr环境搭建
           </label>
@@ -3311,10 +3416,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_2">
         
           
-          <label class="md-nav__link" for="__nav_17_2" id="__nav_17_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_2" id="__nav_18_2_label" tabindex="0">
             
   
   
@@ -3327,8 +3432,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_2">
             <span class="md-nav__icon md-icon"></span>
             2.zephyr创建boards
           </label>
@@ -3403,10 +3508,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_3">
         
           
-          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_3" id="__nav_18_3_label" tabindex="0">
             
   
   
@@ -3419,8 +3524,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_3">
             <span class="md-nav__icon md-icon"></span>
             3.zephyr通用基础
           </label>
@@ -3755,10 +3860,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19">
         
           
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
             
   
   
@@ -3771,8 +3876,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_18">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             先辑
           </label>
@@ -3823,10 +3928,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20">
         
           
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
             
   
   
@@ -3839,8 +3944,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
             <span class="md-nav__icon md-icon"></span>
             全志v853音视频开发
           </label>
@@ -4022,10 +4127,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_8">
         
           
-          <label class="md-nav__link" for="__nav_19_8" id="__nav_19_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_8" id="__nav_20_8_label" tabindex="0">
             
   
   
@@ -4038,8 +4143,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_8">
             <span class="md-nav__icon md-icon"></span>
             全志原厂sdk
           </label>
@@ -4160,10 +4265,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_9">
         
           
-          <label class="md-nav__link" for="__nav_19_9" id="__nav_19_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_9" id="__nav_20_9_label" tabindex="0">
             
   
   
@@ -4176,8 +4281,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_9">
             <span class="md-nav__icon md-icon"></span>
             音视频基础概念
           </label>
@@ -4259,10 +4364,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21">
         
           
-          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
             
   
   
@@ -4275,8 +4380,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_20">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
             <span class="md-nav__icon md-icon"></span>
             聆思科技
           </label>
@@ -4350,10 +4455,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22">
         
           
-          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
             
   
   
@@ -4366,8 +4471,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_21">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
             <span class="md-nav__icon md-icon"></span>
             视频总结方案
           </label>
@@ -4533,10 +4638,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23">
         
           
-          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
             
   
   
@@ -4549,8 +4654,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_22">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
             <span class="md-nav__icon md-icon"></span>
             视频翻译方案
           </label>
@@ -4601,10 +4706,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24">
         
           
-          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
             
   
   
@@ -4617,8 +4722,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_23">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
             <span class="md-nav__icon md-icon"></span>
             迅为3568
           </label>
@@ -5030,7 +5135,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5163,8 +5268,8 @@
 
 
 
-<h1 id="buildroot">buildroot根文件系统制作</h1>
-<h2 id="_1">前言</h2>
+<h1 id="buildroot">buildroot根文件系统制作<a class="headerlink" href="#buildroot" title="Permanent link">¶</a></h1>
+<h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <p>一般来说都是使用动态库来做，但是使用busybox需要手工去找动态库的依赖，很难搞，所以就有其他根文件系统制作工具，比如Buildroot</p>
 <ol>
 <li>
@@ -5179,7 +5284,7 @@
 <li>还要考虑依赖链（glibc、libm、ld-linux等），缺一个就报错。</li>
 <li>这种“手工找库拷贝”是初学者常见的麻烦事。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p>Buildroot 的优势</p>
@@ -5198,7 +5303,7 @@
 </li>
 <li>只要你的 buildroot 配置没问题，编译完的 rootfs 用于目标板（架构一致），通常不会遇到“找不到库”的错误。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p>为什么 Buildroot 能自动搞定？</p>
@@ -5209,7 +5314,7 @@
 <li>同时，Buildroot 用“包描述+依赖自动解析”机制，确保所选 BusyBox 的依赖一并处理。</li>
 <li>所以最终生成的文件系统，已经自带完整动态库链。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>总结：手工 vs Buildroot</li>
 </ol>
@@ -5237,7 +5342,7 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<hr>
 <ol>
 <li>
 <p>补充</p>
@@ -5251,22 +5356,26 @@
 <blockquote>
 <p><strong>Buildroot</strong> 极大简化了动态库依赖处理流程，生成的 rootfs 直接可用，省去手工查找和复制动态库的麻烦，非常适合嵌入式Linux实际项目。</p>
 </blockquote>
-<h2 id="buildroot_1">Buildroot使用方法</h2>
-<h2 id="1-buildroot">1. 获取 Buildroot 源码</h2>
+<h2 id="buildroot_1">Buildroot使用方法<a class="headerlink" href="#buildroot_1" title="Permanent link">¶</a></h2>
+<h2 id="1-buildroot">1. 获取 Buildroot 源码<a class="headerlink" href="#1-buildroot" title="Permanent link">¶</a></h2>
 <p>官网下载稳定版或使用 git：</p>
-<pre><code>sh复制编辑git clone https://git.busybox.net/buildroot
-cd buildroot
-# 或下载指定版本
-# wget https://buildroot.org/downloads/buildroot-2024.02.tar.gz
-# tar xzf buildroot-2024.02.tar.gz
-</code></pre>
-<hr />
-<h2 id="2">2. 选择目标平台（架构和处理器）</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>sh复制编辑git clone https://git.busybox.net/buildroot
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>cd buildroot
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a># 或下载指定版本
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a># wget https://buildroot.org/downloads/buildroot-2024.02.tar.gz
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a># tar xzf buildroot-2024.02.tar.gz
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="2">2. 选择目标平台（架构和处理器）<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
 <p>Buildroot 支持 ARM、MIPS、RISC-V、x86、PowerPC 等。可选预置板卡，也可自定义。</p>
-<hr />
-<h2 id="3-buildroot">3. 配置 Buildroot</h2>
-<pre><code>make menuconfig
-</code></pre>
+<hr>
+<h2 id="3-buildroot">3. 配置 Buildroot<a class="headerlink" href="#3-buildroot" title="Permanent link">¶</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>make menuconfig
+</span></code></pre></div></td></tr></tbody></table></div>
 <p>会弹出图形界面（ncurses），你可以完成以下设置：</p>
 <ul>
 <li><strong>Target Architecture</strong>：选择目标架构（如 ARM Cortex-A7、A53等）</li>
@@ -5281,16 +5390,16 @@ cd buildroot
 <li>菜单内每一项都可详细配置。</li>
 <li>可保存当前配置为 <code>.config</code> 文件，方便后续复用。</li>
 </ul>
-<hr />
-<h2 id="4">4. 开始构建</h2>
-<pre><code>make -j$(nproc)
-</code></pre>
+<hr>
+<h2 id="4">4. 开始构建<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>make -j$(nproc)
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>首次构建会下载/编译工具链、所有源码和依赖，耐心等待。</li>
 <li>中途断网可能导致失败，建议用国内镜像源（可配置）。</li>
 </ul>
-<hr />
-<h2 id="5">5. 编译结果在哪里？</h2>
+<hr>
+<h2 id="5">5. 编译结果在哪里？<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
 <p>编译完成后，主要输出文件在 <code>output/images/</code> 目录：</p>
 <ul>
 <li><code>rootfs.ext4</code>、<code>rootfs.squashfs</code> 等：根文件系统镜像</li>
@@ -5299,8 +5408,8 @@ cd buildroot
 <li><code>rootfs.cpio</code>：用于initramfs启动</li>
 <li>也可能有 dtb、u-boot等</li>
 </ul>
-<hr />
-<h2 id="6">6. 烧录/测试</h2>
+<hr>
+<h2 id="6">6. 烧录/测试<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
 <ul>
 <li>
 <p>可以把 <code>rootfs.ext4</code> 烧到 SD 卡/EMMC（适合开发板启动）</p>
@@ -5313,12 +5422,16 @@ cd buildroot
    示例（ARM QEMU）：</p>
 </li>
 </ul>
-<p><code>qemu-system-arm -M vexpress-a9 -kernel output/images/zImage \
-    -dtb output/images/vexpress-v2p-ca9.dtb \
-    -initrd output/images/rootfs.cpio \
-    -append "console=ttyAMA0" -serial stdio -nographic</code></p>
-<hr />
-<h2 id="7">7. 常用高级技巧</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>qemu-system-arm -M vexpress-a9 -kernel output/images/zImage \
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>  -dtb output/images/vexpress-v2p-ca9.dtb \
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>  -initrd output/images/rootfs.cpio \
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>  -append "console=ttyAMA0" -serial stdio -nographic
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="7">7. 常用高级技巧<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
 <ul>
 <li><code>make clean</code>：清理目标产物</li>
 <li><code>make menuconfig</code>：随时修改配置</li>
@@ -5326,27 +5439,31 @@ cd buildroot
 <li><code>make &lt;package&gt;-menuconfig</code>：定制某个包的配置（如 <code>make busybox-menuconfig</code>）</li>
 <li><code>output/target/</code>：实际的根文件系统目录，可以手动加文件</li>
 </ul>
-<hr />
-<h2 id="8">8. 配置保存与复用</h2>
+<hr>
+<h2 id="8">8. 配置保存与复用<a class="headerlink" href="#8" title="Permanent link">¶</a></h2>
 <ul>
 <li>保存配置：</li>
 </ul>
-<p><code>sh复制编辑make savedefconfig
-  # 得到 defconfig 文件</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>sh复制编辑make savedefconfig
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a># 得到 defconfig 文件
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>加载配置：</li>
 </ul>
-<p><code>sh复制编辑make defconfig
-  # 会恢复 defconfig 为 .config</code></p>
-<hr />
-<h2 id="9">9. 其它说明</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>sh复制编辑make defconfig
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a># 会恢复 defconfig 为 .config
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="9">9. 其它说明<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
 <ul>
 <li>Buildroot 不能动态管理包（不像 Ubuntu apt/yum），所有包需编译期选定。</li>
 <li>如需添加自定义包，可以写自定义包描述文件（package 目录）。</li>
 <li>适合用于“固件生成”、“生产环境rootfs打包”，不适合开发板本地软件调试。</li>
 </ul>
-<hr />
-<h1 id="_2">总结</h1>
+<hr>
+<h1 id="_2">总结<a class="headerlink" href="#_2" title="Permanent link">¶</a></h1>
 <table>
 <thead>
 <tr>
@@ -5377,51 +5494,74 @@ cd buildroot
 </tr>
 </tbody>
 </table>
-<h2 id="_3">实践</h2>
+<h2 id="_3">实践<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>下载链接   https://git.busybox.net/buildroot  </p>
 <ul>
 <li>选一个稳定版</li>
 </ul>
-<p><img alt="image-20250806003701094" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806003701094.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806003701094.png" data-desc-position="bottom"><img alt="image-20250806003701094" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806003701094.png"></a></p>
 <p>解压到buildroot目录</p>
-<pre><code>mkdir buildroot
-tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
-</code></pre>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>mkdir buildroot
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
+</span></code></pre></div></td></tr></tbody></table></div>
 <p>查看</p>
-<pre><code>hdj@hdj-virtual-machine:~/buildroot$ tree -L 1
-.
-├── arch
-├── board
-├── boot
-├── CHANGES
-├── Config.in
-├── Config.in.legacy
-├── configs
-├── COPYING
-├── DEVELOPERS
-├── docs
-├── fs
-├── linux
-├── Makefile
-├── Makefile.legacy
-├── package
-├── README
-├── support
-├── system
-├── toolchain
-└── utils
-
-12 directories, 8 files
-
-</code></pre>
-<pre><code>make menuconfig
-</code></pre>
-<p><img alt="image-20250806004421325" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806004421325.png" /></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>hdj@hdj-virtual-machine:~/buildroot$ tree -L 1
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>.
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>├── arch
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>├── board
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>├── boot
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>├── CHANGES
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>├── Config.in
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>├── Config.in.legacy
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a>├── configs
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>├── COPYING
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a>├── DEVELOPERS
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>├── docs
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a>├── fs
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a>├── linux
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a>├── Makefile
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16"></a>├── Makefile.legacy
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17"></a>├── package
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18"></a>├── README
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19"></a>├── support
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20"></a>├── system
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21"></a>├── toolchain
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22"></a>└── utils
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23"></a>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24"></a>12 directories, 8 files
+</span></code></pre></div></td></tr></tbody></table></div>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>make menuconfig
+</span></code></pre></div></td></tr></tbody></table></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806004421325.png" data-desc-position="bottom"><img alt="image-20250806004421325" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806004421325.png"></a></p>
 <p>imx6ull为例子配置</p>
-<h2 id="target-options">Target options</h2>
-<p><img alt="image-20250806005238886" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806005238886.png" /></p>
-<h2 id="toolchain">Toolchain</h2>
-<p><img alt="image-20250806005726401" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806005726401.png" /></p>
+<h2 id="target-options">Target options<a class="headerlink" href="#target-options" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806005238886.png" data-desc-position="bottom"><img alt="image-20250806005238886" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806005238886.png"></a></p>
+<h2 id="toolchain">Toolchain<a class="headerlink" href="#toolchain" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806005726401.png" data-desc-position="bottom"><img alt="image-20250806005726401" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250806005726401.png"></a></p>
 <ol>
 <li>
 <p><strong>Toolchain type</strong></p>
@@ -5430,7 +5570,7 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 <p><code>(Buildroot toolchain)</code>：<strong>保留默认即可</strong>（Buildroot 自动构建交叉工具链），新手推荐这种。</p>
 </li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>C library (glibc/uClibc/musl)</strong></p>
@@ -5442,7 +5582,7 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 <li><code>musl</code>：极简，体积小，现代嵌入式也很常用，兼容性稍差，但非常适合极简系统。</li>
 <li>如果你对C库没有特殊需求，<strong>开发板性能充裕就选 glibc，追求小体积选 musl</strong>。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>Kernel Headers</strong></p>
@@ -5451,7 +5591,7 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 <p><code>(Linux 6.14.x kernel headers)</code>：默认即可。这个只是用来编译库和应用，不影响你实际烧录的内核版本。</p>
 </li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>Binutils / GCC 版本</strong></p>
@@ -5461,7 +5601,7 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 </li>
 <li>可以指定稳定老版本，但 Cortex-A7 用新版本没问题。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>Enable C++/Fortran/OpenMP/Graphite support</strong></p>
@@ -5471,7 +5611,7 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 </li>
 <li>其余如不需要 Fortran/OpenMP/Graphite 都可以不勾。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>Host GDB / gconv libraries / Extra toolchain libraries</strong></p>
@@ -5481,7 +5621,7 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 </li>
 <li><code>gconv libraries</code> 只对国际化有需求时才需拷贝。</li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>Target Optimizations</strong></p>
@@ -5491,7 +5631,7 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 </li>
 <li>进阶玩家可填优化选项如：<code>-O2 -mcpu=cortex-a7 -mfpu=vfpv4-d16 -mfloat-abi=hard -mthumb</code></li>
 </ol>
-<hr />
+<hr>
 <ol>
 <li>
 <p><strong>Bare metal toolchain</strong></p>
@@ -5509,8 +5649,8 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
 <li><strong>FPU type</strong>：选 <code>vfpv4-d16</code></li>
 <li><strong>Instruction Set</strong>：用户空间推荐 <code>Thumb2</code></li>
 </ul>
-<hr />
-<h3 id="_4"><strong>结论：</strong></h3>
+<hr>
+<h3 id="_4"><strong>结论：</strong><a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
 <ul>
 <li>保留默认 <code>Buildroot toolchain</code></li>
 <li>C库选 glibc（或 musl）</li>
@@ -5553,6 +5693,19 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
   
 </div>
       
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/rss.xml" target="_blank" rel="noopener" title="订阅 RSS" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"></path></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -5565,11 +5718,13 @@ tar --strip-components=1 -xjf buildroot-2025.05.tar.bz2 -C buildroot
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

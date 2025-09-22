@@ -1,12 +1,11 @@
-
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
+        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/busybox%E5%88%B6%E4%BD%9C%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
       
       
         <link rel="prev" href="../buildroot%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%B6%E4%BD%9C/">
@@ -14,6 +13,9 @@
       
         <link rel="next" href="../kernel%E5%90%AF%E5%8A%A8/">
       
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
@@ -38,7 +40,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,7 +52,17 @@
     
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     <body dir="ltr">
@@ -81,12 +93,12 @@
     <a href="../.." title="newbies博客站" class="md-header__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,7 +126,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -123,15 +135,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
         
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -167,7 +179,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -179,7 +191,7 @@
     <a href="../.." title="newbies博客站" class="md-nav__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     newbies博客站
@@ -224,7 +236,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -338,7 +350,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -452,10 +464,103 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -468,8 +573,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Cmake
           </label>
@@ -566,10 +671,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -582,8 +687,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Lib
           </label>
@@ -682,10 +787,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -698,8 +803,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Linux启动流程
           </label>
@@ -1029,10 +1134,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1045,8 +1150,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Linux驱动
           </label>
@@ -1067,10 +1172,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1">
         
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
             
   
   
@@ -1083,8 +1188,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
             <span class="md-nav__icon md-icon"></span>
             1.ATK 6ull环境配置
           </label>
@@ -1297,10 +1402,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2">
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
             
   
   
@@ -1313,8 +1418,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             2.ATK 6ull驱动
           </label>
@@ -1442,10 +1547,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -1458,8 +1563,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Lvgl
           </label>
@@ -1579,10 +1684,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10">
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   
@@ -1595,8 +1700,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             N8n
           </label>
@@ -1785,10 +1890,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11">
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   
@@ -1801,8 +1906,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Nordic
           </label>
@@ -1853,10 +1958,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   
@@ -1869,8 +1974,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Openwrt
           </label>
@@ -2036,10 +2141,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13">
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -2052,8 +2157,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Other
           </label>
@@ -2127,10 +2232,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14">
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -2143,8 +2248,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             St67w61
           </label>
@@ -2264,10 +2369,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15">
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
             
   
   
@@ -2280,8 +2385,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             Stm32 cmake
           </label>
@@ -2493,10 +2598,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16">
         
           
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
             
   
   
@@ -2509,8 +2614,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -3182,10 +3287,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17">
         
           
-          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
             
   
   
@@ -3198,8 +3303,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_16">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             Yolo
           </label>
@@ -3250,10 +3355,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18">
         
           
-          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
             
   
   
@@ -3266,8 +3371,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             Zephyr
           </label>
@@ -3288,10 +3393,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_1">
         
           
-          <label class="md-nav__link" for="__nav_17_1" id="__nav_17_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_1" id="__nav_18_1_label" tabindex="0">
             
   
   
@@ -3304,8 +3409,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_1">
             <span class="md-nav__icon md-icon"></span>
             1.zephyr环境搭建
           </label>
@@ -3380,10 +3485,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_2">
         
           
-          <label class="md-nav__link" for="__nav_17_2" id="__nav_17_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_2" id="__nav_18_2_label" tabindex="0">
             
   
   
@@ -3396,8 +3501,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_2">
             <span class="md-nav__icon md-icon"></span>
             2.zephyr创建boards
           </label>
@@ -3472,10 +3577,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_3">
         
           
-          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_3" id="__nav_18_3_label" tabindex="0">
             
   
   
@@ -3488,8 +3593,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_3">
             <span class="md-nav__icon md-icon"></span>
             3.zephyr通用基础
           </label>
@@ -3824,10 +3929,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19">
         
           
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
             
   
   
@@ -3840,8 +3945,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_18">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             先辑
           </label>
@@ -3892,10 +3997,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20">
         
           
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
             
   
   
@@ -3908,8 +4013,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
             <span class="md-nav__icon md-icon"></span>
             全志v853音视频开发
           </label>
@@ -4091,10 +4196,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_8">
         
           
-          <label class="md-nav__link" for="__nav_19_8" id="__nav_19_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_8" id="__nav_20_8_label" tabindex="0">
             
   
   
@@ -4107,8 +4212,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_8">
             <span class="md-nav__icon md-icon"></span>
             全志原厂sdk
           </label>
@@ -4229,10 +4334,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_9">
         
           
-          <label class="md-nav__link" for="__nav_19_9" id="__nav_19_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_9" id="__nav_20_9_label" tabindex="0">
             
   
   
@@ -4245,8 +4350,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_9">
             <span class="md-nav__icon md-icon"></span>
             音视频基础概念
           </label>
@@ -4328,10 +4433,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21">
         
           
-          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
             
   
   
@@ -4344,8 +4449,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_20">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
             <span class="md-nav__icon md-icon"></span>
             聆思科技
           </label>
@@ -4419,10 +4524,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22">
         
           
-          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
             
   
   
@@ -4435,8 +4540,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_21">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
             <span class="md-nav__icon md-icon"></span>
             视频总结方案
           </label>
@@ -4602,10 +4707,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23">
         
           
-          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
             
   
   
@@ -4618,8 +4723,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_22">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
             <span class="md-nav__icon md-icon"></span>
             视频翻译方案
           </label>
@@ -4670,10 +4775,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24">
         
           
-          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
             
   
   
@@ -4686,8 +4791,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_23">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
             <span class="md-nav__icon md-icon"></span>
             迅为3568
           </label>
@@ -5099,7 +5204,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5301,114 +5406,150 @@
 
 
 
-<h1 id="busybox">busybox根文件系统制作</h1>
+<h1 id="busybox">busybox根文件系统制作<a class="headerlink" href="#busybox" title="Permanent link">¶</a></h1>
 <p>（不推荐，可以简单了解一下，使用手工解决依赖问题，麻烦，推荐buildroot）</p>
-<h2 id="1">1. 交叉编译工具链准备</h2>
+<h2 id="1">1. 交叉编译工具链准备<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>获取交叉编译工具链</strong>（如<code>arm-linux-gnueabihf-gcc</code>等），确保在开发机上可用，且<code>$PATH</code>已包含其bin目录。</li>
 </ul>
-<pre><code>export CROSS_COMPILE=arm-linux-gnueabihf-
-export ARCH=arm
-</code></pre>
-<h2 id="2-busybox">2. 编译BusyBox</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>export CROSS_COMPILE=arm-linux-gnueabihf-
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>export ARCH=arm
+</span></code></pre></div></td></tr></tbody></table></div>
+<h2 id="2-busybox">2. 编译BusyBox<a class="headerlink" href="#2-busybox" title="Permanent link">¶</a></h2>
 <ol>
 <li><strong>下载源码</strong></li>
 </ol>
-<p><code>wget https://busybox.net/downloads/busybox-1.36.1.tar.bz2
-   tar xjf busybox-1.36.1.tar.bz2
-   cd busybox-1.36.1</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>wget https://busybox.net/downloads/busybox-1.36.1.tar.bz2
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>tar xjf busybox-1.36.1.tar.bz2
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>cd busybox-1.36.1
+</span></code></pre></div></td></tr></tbody></table></div>
 <ol>
 <li><strong>配置BusyBox</strong>
     推荐用<code>make menuconfig</code>，可以自定义功能：</li>
 </ol>
-<p><code>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
-   # 选择"Build static binary"（静态编译更方便裸机移植）</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a># 选择"Build static binary"（静态编译更方便裸机移植）
+</span></code></pre></div></td></tr></tbody></table></div>
 <ol>
 <li><strong>编译并安装</strong></li>
 </ol>
-<p><code>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j$(nproc)
-   make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- install</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j$(nproc)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- install
+</span></code></pre></div></td></tr></tbody></table></div>
 <p>安装后生成<code>_install/</code>目录，里面是已编译好的BusyBox应用软链接。</p>
-<hr />
-<h2 id="3">3. 根文件系统目录结构搭建</h2>
+<hr>
+<h2 id="3">3. 根文件系统目录结构搭建<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
 <ul>
 <li>按照Linux Filesystem Hierarchy Standard(FHS)创建基本目录结构。例如：</li>
 </ul>
-<p><code>mkdir -p rootfs/{bin,sbin,etc,proc,sys,usr/{bin,sbin},dev,tmp,var,lib,mnt,home}</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>mkdir -p rootfs/{bin,sbin,etc,proc,sys,usr/{bin,sbin},dev,tmp,var,lib,mnt,home}
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>将BusyBox的输出内容复制到根文件系统：</li>
 </ul>
-<p><code>cp -a busybox-1.36.1/_install/* rootfs/</code></p>
-<hr />
-<h2 id="4">4. 设备节点创建</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a>cp -a busybox-1.36.1/_install/* rootfs/
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="4">4. 设备节点创建<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
 <ul>
 <li>必须有基本设备节点，如<code>/dev/console</code>和<code>/dev/null</code>，可用<code>sudo mknod</code>在PC下创建：</li>
 </ul>
-<p><code>sudo mknod -m 600 rootfs/dev/console c 5 1
-  sudo mknod -m 666 rootfs/dev/null c 1 3</code></p>
-<hr />
-<h2 id="5">5. 基本配置文件准备</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>sudo mknod -m 600 rootfs/dev/console c 5 1
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>sudo mknod -m 666 rootfs/dev/null c 1 3
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="5">5. 基本配置文件准备<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>/etc/inittab</strong>（BusyBox init的启动配置）：</li>
 </ul>
-<p><code>cat &gt; rootfs/etc/inittab &lt;&lt;EOF
-  ::sysinit:/etc/init.d/rcS
-  ::askfirst:-/bin/sh
-  ::ctrlaltdel:/sbin/reboot
-  ::shutdown:/sbin/swapoff -a
-  ::shutdown:/bin/umount -a -r
-  ::shutdown:/sbin/reboot
-  EOF</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a>cat &gt; rootfs/etc/inittab &lt;&lt;EOF
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>::sysinit:/etc/init.d/rcS
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>::askfirst:-/bin/sh
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>::ctrlaltdel:/sbin/reboot
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>::shutdown:/sbin/swapoff -a
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>::shutdown:/bin/umount -a -r
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a>::shutdown:/sbin/reboot
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>EOF
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li><strong>/etc/init.d/rcS</strong>（启动脚本，务必加执行权限）：</li>
 </ul>
-<p><code>mkdir -p rootfs/etc/init.d
-  cat &gt; rootfs/etc/init.d/rcS &lt;&lt;EOF
-  #!/bin/sh
-  mount -t proc none /proc
-  mount -t sysfs none /sys
-  # 可选：mount -t tmpfs none /tmp
-  EOF
-  chmod +x rootfs/etc/init.d/rcS</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a>mkdir -p rootfs/etc/init.d
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>cat &gt; rootfs/etc/init.d/rcS &lt;&lt;EOF
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>#!/bin/sh
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>mount -t proc none /proc
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>mount -t sysfs none /sys
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a># 可选：mount -t tmpfs none /tmp
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a>EOF
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>chmod +x rootfs/etc/init.d/rcS
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li>其他如<code>/etc/passwd</code>, <code>/etc/group</code>可以简单创建，避免启动报错。</li>
 </ul>
-<hr />
-<h2 id="6">6. 库文件准备（仅动态编译需做）</h2>
+<hr>
+<h2 id="6">6. 库文件准备（仅动态编译需做）<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
 <ul>
 <li>如果BusyBox为<strong>静态编译</strong>，可跳过此步。</li>
 <li>动态编译需将交叉工具链下的对应<code>lib/ld-linux*.so*</code>, <code>lib/libc.so*</code>等库复制到<code>rootfs/lib</code>或<code>rootfs/lib64</code>。</li>
 </ul>
-<hr />
-<h2 id="7">7. 其它（可选）</h2>
+<hr>
+<h2 id="7">7. 其它（可选）<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
 <ul>
 <li>可添加自己的应用程序或脚本到<code>rootfs/bin</code>、<code>rootfs/sbin</code>等目录。</li>
 <li>可配置<code>/etc/fstab</code>、<code>/etc/profile</code>等以便于挂载和环境变量设置。</li>
 </ul>
-<hr />
-<h2 id="8">8. 打包成文件系统映像</h2>
+<hr>
+<h2 id="8">8. 打包成文件系统映像<a class="headerlink" href="#8" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>制作cpio/initramfs镜像</strong></li>
 </ul>
-<p><code>cd rootfs
-  find . | cpio -o -H newc &gt; ../rootfs.cpio</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a>cd rootfs
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>find . | cpio -o -H newc &gt; ../rootfs.cpio
+</span></code></pre></div></td></tr></tbody></table></div>
 <ul>
 <li><strong>制作squashfs/ext4镜像</strong></li>
 </ul>
-<p><code># ext4（适合SD/EMMC/flash，挂载为rootfs）
-  dd if=/dev/zero of=../rootfs.ext4 bs=1M count=32
-  mkfs.ext4 ../rootfs.ext4
-  sudo mount -o loop ../rootfs.ext4 /mnt
-  sudo cp -a * /mnt
-  sudo umount /mnt</code></p>
-<hr />
-<h2 id="9">9. 挂载/测试</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a># ext4（适合SD/EMMC/flash，挂载为rootfs）
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>dd if=/dev/zero of=../rootfs.ext4 bs=1M count=32
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>mkfs.ext4 ../rootfs.ext4
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>sudo mount -o loop ../rootfs.ext4 /mnt
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a>sudo cp -a * /mnt
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a>sudo umount /mnt
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="9">9. 挂载/测试<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
 <ul>
 <li>用QEMU或开发板挂载根文件系统（initramfs, NFS, SD/EMMC/flash等），启动测试。</li>
 <li>可以通过串口或控制台观察<code>init</code>流程。</li>
 </ul>
-<hr />
-<h2 id="_1">总结表格</h2>
+<hr>
+<h2 id="_1">总结表格<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -5455,16 +5596,16 @@ export ARCH=arm
 </tr>
 </tbody>
 </table>
-<h2 id="busybox_1">BusyBox 制作根文件系统，使用动态库与使用静态库有什么优缺点？</h2>
-<h2 id="1-vs">1. 动态库 vs 静态库概念</h2>
+<h2 id="busybox_1">BusyBox 制作根文件系统，使用动态库与使用静态库有什么优缺点？<a class="headerlink" href="#busybox_1" title="Permanent link">¶</a></h2>
+<h2 id="1-vs">1. 动态库 vs 静态库概念<a class="headerlink" href="#1-vs" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>静态库（Static linking）</strong>
    BusyBox及其他程序在编译时，所有依赖的库代码都被打包进可执行文件，运行时不再依赖外部库文件。</li>
 <li><strong>动态库（Dynamic linking）</strong>
    可执行文件本身只包含主程序，依赖的库（如libc.so、ld-linux.so等）在运行时由系统动态加载，需要根文件系统中有这些库。</li>
 </ul>
-<hr />
-<h2 id="2">2. 对比表</h2>
+<hr>
+<h2 id="2">2. 对比表<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -5516,9 +5657,9 @@ export ARCH=arm
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="3_1">3. 优缺点详细说明</h2>
-<h3 id="_2">静态库优缺点</h3>
+<hr>
+<h2 id="3_1">3. 优缺点详细说明<a class="headerlink" href="#3_1" title="Permanent link">¶</a></h2>
+<h3 id="_2">静态库优缺点<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <p><strong>优点：</strong></p>
 <ul>
 <li>整个可执行文件自足（只有BusyBox一个文件），适合初学和极简/只读/ROM型系统。</li>
@@ -5531,7 +5672,7 @@ export ARCH=arm
 <li>RAM利用率低（如多个程序用同样的库，都各自独立占内存）。</li>
 <li>更新或修复某一库漏洞，要重编整个可执行程序。</li>
 </ul>
-<h3 id="_3">动态库优缺点</h3>
+<h3 id="_3">动态库优缺点<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <p><strong>优点：</strong></p>
 <ul>
 <li>可执行文件体积小。</li>
@@ -5545,16 +5686,16 @@ export ARCH=arm
 <li>需要处理库版本、路径、软链接等细节（对新手不友好）。</li>
 <li>初次移植时易因库文件缺失或不匹配导致“找不到libc.so.6”等错误。</li>
 </ul>
-<hr />
-<h2 id="4_1">4. 实践建议</h2>
+<hr>
+<h2 id="4_1">4. 实践建议<a class="headerlink" href="#4_1" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>极简环境/初学实验/单一BusyBox场景</strong>：优先用<strong>静态库</strong>。</li>
 <li><strong>多应用/维护升级/正式发行</strong>：优先用<strong>动态库</strong>。</li>
 <li><strong>存储极度有限/裸机/无libc</strong>：只能用静态库。</li>
 <li><strong>如需将busybox和自编小工具都静态编译，移植最方便，但整体文件大。</strong></li>
 </ul>
-<hr />
-<h2 id="5_1">5. 总结</h2>
+<hr>
+<h2 id="5_1">5. 总结<a class="headerlink" href="#5_1" title="Permanent link">¶</a></h2>
 <blockquote>
 <p><strong>静态库更简单，动态库更灵活高效。嵌入式首推静态库，小型Linux发行/后续扩展优选动态库。</strong></p>
 </blockquote>
@@ -5595,6 +5736,19 @@ export ARCH=arm
   
 </div>
       
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/rss.xml" target="_blank" rel="noopener" title="订阅 RSS" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"></path></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -5607,11 +5761,13 @@ export ARCH=arm
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

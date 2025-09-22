@@ -1,12 +1,11 @@
-
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
+        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/ai/2.Gemini%20%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/">
       
       
         <link rel="prev" href="../1.Gemini%20%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/">
@@ -14,6 +13,9 @@
       
         <link rel="next" href="../edg-tts%E6%B5%8B%E8%AF%95/">
       
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
@@ -38,7 +40,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -50,7 +52,17 @@
     
     
     
-  </head>
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     <body dir="ltr">
@@ -81,12 +93,12 @@
     <a href="../.." title="newbies博客站" class="md-header__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,7 +126,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -123,15 +135,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
         
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -167,7 +179,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -179,7 +191,7 @@
     <a href="../.." title="newbies博客站" class="md-nav__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     newbies博客站
@@ -643,7 +655,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -757,10 +769,103 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    归档
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -773,8 +878,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Cmake
           </label>
@@ -871,10 +976,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -887,8 +992,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Lib
           </label>
@@ -985,10 +1090,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1001,8 +1106,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Linux启动流程
           </label>
@@ -1122,10 +1227,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1138,8 +1243,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Linux驱动
           </label>
@@ -1160,10 +1265,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1">
         
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
             
   
   
@@ -1176,8 +1281,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
             <span class="md-nav__icon md-icon"></span>
             1.ATK 6ull环境配置
           </label>
@@ -1390,10 +1495,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2">
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
             
   
   
@@ -1406,8 +1511,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             2.ATK 6ull驱动
           </label>
@@ -1535,10 +1640,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -1551,8 +1656,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Lvgl
           </label>
@@ -1672,10 +1777,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10">
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   
@@ -1688,8 +1793,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             N8n
           </label>
@@ -1878,10 +1983,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11">
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   
@@ -1894,8 +1999,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Nordic
           </label>
@@ -1946,10 +2051,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   
@@ -1962,8 +2067,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Openwrt
           </label>
@@ -2129,10 +2234,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13">
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -2145,8 +2250,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Other
           </label>
@@ -2220,10 +2325,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14">
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -2236,8 +2341,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             St67w61
           </label>
@@ -2357,10 +2462,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15">
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
             
   
   
@@ -2373,8 +2478,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             Stm32 cmake
           </label>
@@ -2586,10 +2691,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16">
         
           
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
             
   
   
@@ -2602,8 +2707,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
             <span class="md-nav__icon md-icon"></span>
             Tools
           </label>
@@ -3275,10 +3380,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17">
         
           
-          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
             
   
   
@@ -3291,8 +3396,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_16">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             Yolo
           </label>
@@ -3343,10 +3448,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18">
         
           
-          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
             
   
   
@@ -3359,8 +3464,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             Zephyr
           </label>
@@ -3381,10 +3486,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_1">
         
           
-          <label class="md-nav__link" for="__nav_17_1" id="__nav_17_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_1" id="__nav_18_1_label" tabindex="0">
             
   
   
@@ -3397,8 +3502,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_1">
             <span class="md-nav__icon md-icon"></span>
             1.zephyr环境搭建
           </label>
@@ -3473,10 +3578,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_2">
         
           
-          <label class="md-nav__link" for="__nav_17_2" id="__nav_17_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_2" id="__nav_18_2_label" tabindex="0">
             
   
   
@@ -3489,8 +3594,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_2">
             <span class="md-nav__icon md-icon"></span>
             2.zephyr创建boards
           </label>
@@ -3565,10 +3670,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_3">
         
           
-          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_18_3" id="__nav_18_3_label" tabindex="0">
             
   
   
@@ -3581,8 +3686,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_17_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_3">
             <span class="md-nav__icon md-icon"></span>
             3.zephyr通用基础
           </label>
@@ -3917,10 +4022,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19">
         
           
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
             
   
   
@@ -3933,8 +4038,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_18">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
             <span class="md-nav__icon md-icon"></span>
             先辑
           </label>
@@ -3985,10 +4090,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20">
         
           
-          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
             
   
   
@@ -4001,8 +4106,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
             <span class="md-nav__icon md-icon"></span>
             全志v853音视频开发
           </label>
@@ -4184,10 +4289,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_8">
         
           
-          <label class="md-nav__link" for="__nav_19_8" id="__nav_19_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_8" id="__nav_20_8_label" tabindex="0">
             
   
   
@@ -4200,8 +4305,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_8">
             <span class="md-nav__icon md-icon"></span>
             全志原厂sdk
           </label>
@@ -4322,10 +4427,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20_9">
         
           
-          <label class="md-nav__link" for="__nav_19_9" id="__nav_19_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_20_9" id="__nav_20_9_label" tabindex="0">
             
   
   
@@ -4338,8 +4443,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_19_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_20_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20_9">
             <span class="md-nav__icon md-icon"></span>
             音视频基础概念
           </label>
@@ -4421,10 +4526,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21">
         
           
-          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
             
   
   
@@ -4437,8 +4542,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_20">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
             <span class="md-nav__icon md-icon"></span>
             聆思科技
           </label>
@@ -4512,10 +4617,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22">
         
           
-          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
             
   
   
@@ -4528,8 +4633,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_21">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
             <span class="md-nav__icon md-icon"></span>
             视频总结方案
           </label>
@@ -4695,10 +4800,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23">
         
           
-          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
             
   
   
@@ -4711,8 +4816,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_22">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
             <span class="md-nav__icon md-icon"></span>
             视频翻译方案
           </label>
@@ -4763,10 +4868,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24">
         
           
-          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
             
   
   
@@ -4779,8 +4884,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_23">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
             <span class="md-nav__icon md-icon"></span>
             迅为3568
           </label>
@@ -5192,7 +5297,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5487,7 +5592,7 @@
 
 
 
-<h1 id="gemini">Gemini 中转服务器优化思路</h1>
+<h1 id="gemini">Gemini 中转服务器优化思路<a class="headerlink" href="#gemini" title="Permanent link">¶</a></h1>
 <p>思考一个问题，使用中转服务器，本地的访问只需要一个链接地址就可以访问了，如何做商业化？</p>
 <ul>
 <li>中转服务器应该可以提供多家的模型（gemini   openai deepseek minimax ）</li>
@@ -5496,24 +5601,24 @@
 <li>中转服务器有对设备的访问权限管理</li>
 </ul>
 <p><strong>“不使用API Key，直接用唯一设备号做认证和权限管理”</strong>，<strong>怎么做到“安全”，以及“防伪、防重放、防暴力猜测”</strong>，下面我给你<strong>详细解释常见技术方案</strong>，用简单的语言和流程图。</p>
-<h2 id="_1">一、最简单的不安全方案（只靠设备号）</h2>
+<h2 id="_1">一、最简单的不安全方案（只靠设备号）<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
 <ul>
 <li>设备请求：<code>POST /api/chat {"device_id": "ABC123456"}</code></li>
 <li>后台：查数据库，看<code>device_id</code>有没有注册过，有则允许请求</li>
 </ul>
-<h3 id="_2"><strong>风险：</strong></h3>
+<h3 id="_2"><strong>风险：</strong><a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <ul>
 <li>设备号被抓包/泄漏/暴力猜测后，任何人都能伪造请求，冒充设备</li>
 </ul>
-<hr />
-<h2 id="_3">二、<strong>加强版：每台设备有唯一密钥（设备密钥）</strong></h2>
-<h3 id="key"><strong>出厂时，每台设备有一份独立密钥</strong>（不是所有设备通用的Key）</h3>
+<hr>
+<h2 id="_3">二、<strong>加强版：每台设备有唯一密钥（设备密钥）</strong><a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h3 id="key"><strong>出厂时，每台设备有一份独立密钥</strong>（不是所有设备通用的Key）<a class="headerlink" href="#key" title="Permanent link">¶</a></h3>
 <ul>
 <li>设备号：<code>device_id</code></li>
 <li>设备密钥：<code>device_secret</code>（比如一串128bit随机数，存储在设备安全区）</li>
 </ul>
-<h3 id="_4"><strong>调用流程：</strong></h3>
-<h4 id="1">1. 设备端</h4>
+<h3 id="_4"><strong>调用流程：</strong><a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<h4 id="1">1. 设备端<a class="headerlink" href="#1" title="Permanent link">¶</a></h4>
 <ul>
 <li>
 <p>生成一条消息：比如请求内容<code>data</code>、时间戳<code>ts</code></p>
@@ -5526,95 +5631,130 @@
 <p>发送内容：</p>
 </li>
 </ul>
-<p><code>{
-    "device_id": "ABC123456",
-    "data": "你要问的大模型内容",
-    "ts": 17250000,
-    "sign": "38d7a2...fcf9"   //签名
-  }</code></p>
-<h4 id="2">2. 服务器端</h4>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>  "device_id": "ABC123456",
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>  "data": "你要问的大模型内容",
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>  "ts": 17250000,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>  "sign": "38d7a2...fcf9"   //签名
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>}
+</span></code></pre></div></td></tr></tbody></table></div>
+<h4 id="2">2. 服务器端<a class="headerlink" href="#2" title="Permanent link">¶</a></h4>
 <ul>
 <li>查<code>device_id</code>，获取该设备的<code>device_secret</code></li>
 <li>用收到的<code>data</code>、<code>ts</code>、本地的<code>device_secret</code>重新算一次<code>sign</code>，与设备上传的<code>sign</code>比对</li>
 <li>如果一致、且<code>ts</code>在允许的时间范围内（防重放），则通过</li>
 </ul>
-<h3 id="_5"><strong>优势：</strong></h3>
+<h3 id="_5"><strong>优势：</strong><a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
 <ul>
 <li>即使别人知道了设备号，没有密钥无法生成正确签名，伪造请求就会失败</li>
 <li><code>ts</code>（时间戳）防止同一个包被多次利用（重放攻击）</li>
 </ul>
-<hr />
-<h2 id="_6">三、<strong>流程图</strong></h2>
-<pre><code>      ┌──────────────┐             ┌──────────────┐
-      │   设备端     │             │    服务器    │
-      └─────┬────────┘             └─────┬────────┘
-            │                              │
-   1. 用 secret 算 sign                   │
-            │                              │
-   2. POST {device_id, data, ts, sign}     │
-            ├───────────────HTTP──────────&gt;│
-            │                              │
-                                 3. 查device_id, 拿secret
-                                 4. 校验 sign 是否正确
-                                 5. 检查ts，是否过期/重放
-                                 6. 认证通过才处理请求
-</code></pre>
-<hr />
-<h2 id="_7">四、<strong>防暴力猜测</strong></h2>
+<hr>
+<h2 id="_6">三、<strong>流程图</strong><a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>      ┌──────────────┐             ┌──────────────┐
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>      │   设备端     │             │    服务器    │
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>      └─────┬────────┘             └─────┬────────┘
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>            │                              │
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>   1. 用 secret 算 sign                   │
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>            │                              │
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>   2. POST {device_id, data, ts, sign}     │
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>            ├───────────────HTTP──────────&gt;│
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>            │                              │
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>                                 3. 查device_id, 拿secret
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>                                 4. 校验 sign 是否正确
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>                                 5. 检查ts，是否过期/重放
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>                                 6. 认证通过才处理请求
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="_7">四、<strong>防暴力猜测</strong><a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
 <ul>
 <li>设备号、密钥足够长且不可预测（如UUID、128位随机数）</li>
 <li>如果短时间同一IP/同一设备号连续多次认证失败，直接封禁或限流</li>
 </ul>
-<hr />
-<h2 id="_8">五、现实中常用的做法</h2>
+<hr>
+<h2 id="_8">五、现实中常用的做法<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
 <ul>
 <li>很多<strong>物联网云平台、智能家居云、云打印服务</strong>都采用这种机制</li>
 <li>微信小程序、智能门锁、扫码点餐硬件等也会用</li>
 <li><strong>云服务比如腾讯云IoT Hub、阿里云物联网平台都用设备密钥+签名认证</strong></li>
 </ul>
-<hr />
-<h2 id="_9">六、总结</h2>
+<hr>
+<h2 id="_9">六、总结<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>设备号</strong>负责身份识别（谁在请求）</li>
 <li><strong>设备密钥/签名</strong>保证身份真实性（你真的是这个设备！）</li>
 <li><strong>时间戳/Nonce</strong>防止老包被重放</li>
 <li>不用明文API Key、不需要每台设备人工配置，只需要安全写入密钥</li>
 </ul>
-<hr />
-<h2 id="demo">七、举个最小Demo（伪代码）</h2>
+<hr>
+<h2 id="demo">七、举个最小Demo（伪代码）<a class="headerlink" href="#demo" title="Permanent link">¶</a></h2>
 <p><strong>设备端：</strong></p>
-<pre><code>import hmac, hashlib, time
-device_id = &quot;ABC123456&quot;
-device_secret = &quot;MY_SECRET_KEY&quot;
-data = '{&quot;prompt&quot;:&quot;hello&quot;}'
-ts = int(time.time())
-msg = data + str(ts)
-sign = hmac.new(device_secret.encode(), msg.encode(), hashlib.sha256).hexdigest()
-
-post_body = {
-    &quot;device_id&quot;: device_id,
-    &quot;data&quot;: data,
-    &quot;ts&quot;: ts,
-    &quot;sign&quot;: sign
-}
-</code></pre>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>import hmac, hashlib, time
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>device_id = "ABC123456"
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>device_secret = "MY_SECRET_KEY"
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>data = '{"prompt":"hello"}'
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>ts = int(time.time())
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>msg = data + str(ts)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>sign = hmac.new(device_secret.encode(), msg.encode(), hashlib.sha256).hexdigest()
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>post_body = {
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>    "device_id": device_id,
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a>    "data": data,
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a>    "ts": ts,
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>    "sign": sign
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>}
+</span></code></pre></div></td></tr></tbody></table></div>
 <p><strong>服务器端：</strong></p>
-<pre><code># 1. 查device_id拿到device_secret
-# 2. 用收到的data+ts+secret 算一次sign
-# 3. 比对
-# 4. 检查ts在±300秒内
-# 5. 认证通过才继续
-</code></pre>
-<hr />
-<h2 id="_10">八、如果只用设备号，没密钥会有啥问题？</h2>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a># 1. 查device_id拿到device_secret
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a># 2. 用收到的data+ts+secret 算一次sign
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a># 3. 比对
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a># 4. 检查ts在±300秒内
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a># 5. 认证通过才继续
+</span></code></pre></div></td></tr></tbody></table></div>
+<hr>
+<h2 id="_10">八、如果只用设备号，没密钥会有啥问题？<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
 <ul>
 <li>随便谁都能冒充你的设备号（抓包或者枚举）</li>
 <li>设备号的保护完全靠物理隔离，几乎不安全</li>
 </ul>
-<h2 id="_11">是不是服务器端知道所有的秘钥，设备认证时遍历数据库查询是否放行？</h2>
+<h2 id="_11">是不是服务器端知道所有的秘钥，设备认证时遍历数据库查询是否放行？<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
 <p>理解<strong>基本正确</strong>，但实际实现上会更高效，不需要“全表遍历”——<strong>服务器端会通过设备号（device_id）快速查找密钥</strong>。</p>
-<h3 id="_12">详细解释</h3>
-<h4 id="1_1">1. <strong>服务器端怎么存密钥？</strong></h4>
+<h3 id="_12">详细解释<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<h4 id="1_1">1. <strong>服务器端怎么存密钥？</strong><a class="headerlink" href="#1_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>数据库（比如MySQL、Redis、MongoDB等）里有一张“设备表”：</li>
 </ul>
@@ -5647,33 +5787,33 @@ post_body = {
 <p>服务器收到<code>device_id</code>后，<strong>直接用索引查找</strong>对应的密钥（不是全表遍历，数据库查索引很快）。</p>
 </li>
 </ul>
-<h4 id="2_1">2. <strong>认证流程</strong></h4>
+<h4 id="2_1">2. <strong>认证流程</strong><a class="headerlink" href="#2_1" title="Permanent link">¶</a></h4>
 <ol>
 <li>设备POST过来：<code>device_id</code>, <code>ts</code>, <code>sign</code>, <code>data</code></li>
 <li>服务器<code>SELECT * FROM devices WHERE device_id='xxx'</code></li>
 <li>读到<code>device_secret</code>，用同样算法验签名</li>
 <li>签名、时间戳校验通过就放行，否则拒绝</li>
 </ol>
-<h4 id="3">3. <strong>为什么不用全表遍历？</strong></h4>
+<h4 id="3">3. <strong>为什么不用全表遍历？</strong><a class="headerlink" href="#3" title="Permanent link">¶</a></h4>
 <ul>
 <li>数据库通过<strong>主键（device_id）索引</strong>，查找是<strong>O(1)</strong> 或<strong>O(logN)</strong> 的，不管你有一千台还是一百万台设备都很快。</li>
 </ul>
-<h4 id="4">4. <strong>其他细节</strong></h4>
+<h4 id="4">4. <strong>其他细节</strong><a class="headerlink" href="#4" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>密钥一定不要下发到客户端</strong>（只在设备工厂/生产时一次性烧录好，服务器存一份）。</li>
 <li>如果你有多层服务，也可以通过分布式缓存（比如Redis）做更快的查询。</li>
 </ul>
-<hr />
-<h3 id="_13">总结</h3>
+<hr>
+<h3 id="_13">总结<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>服务器一定知道所有设备的密钥。</strong></li>
 <li><strong>认证时是通过设备号直接查找密钥，不会“遍历”全部设备。</strong></li>
 <li>只要用<strong>唯一device_id做数据库索引</strong>，查找密钥的速度可以做到极快。</li>
 </ul>
-<h2 id="_14">一般设备帖的二维码实际上是与硬件绑定的，也是为了录入到数据库？</h2>
+<h2 id="_14">一般设备帖的二维码实际上是与硬件绑定的，也是为了录入到数据库？<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
 <p>设备上的二维码<strong>几乎都是和硬件唯一信息（比如设备号、MAC、SN、生产批次等）绑定的</strong>，核心目的是<strong>让设备信息高效录入数据库、实现唯一标识和溯源</strong>。</p>
-<hr />
-<h3 id="_15">设备二维码的<strong>本质作用</strong>是什么？</h3>
+<hr>
+<h3 id="_15">设备二维码的<strong>本质作用</strong>是什么？<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>唯一身份标识</strong></li>
 <li>通常二维码内容是<code>SN/DeviceID</code>或URL携带唯一ID。</li>
@@ -5689,15 +5829,15 @@ post_body = {
 <li>有的设备还会把二维码加密/带签名，防止伪造。</li>
 <li>只有官方App或后台能正确解析，确保真品。</li>
 </ol>
-<hr />
-<h3 id="_16">常见二维码内容</h3>
+<hr>
+<h3 id="_16">常见二维码内容<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
 <ul>
 <li>简单：<code>device_id</code>、<code>SN</code></li>
 <li>复杂：<code>https://myserver.com/bind?sn=xxxxxx</code></li>
 <li>安全：<code>sn+签名</code>（如<code>sn=xxx&amp;sign=abcdef1234</code>）</li>
 </ul>
-<hr />
-<h3 id="_17">举例</h3>
+<hr>
+<h3 id="_17">举例<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
 <ul>
 <li>小米/华为路由器、IoT设备出厂二维码，是唯一SN编码。</li>
 <li>你扫码注册，App上传二维码内容到服务器，后台就能查数据库关联设备身份、权限和用户。</li>
@@ -5738,6 +5878,19 @@ post_body = {
   
 </div>
       
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/rss.xml" target="_blank" rel="noopener" title="订阅 RSS" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"></path></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -5750,11 +5903,13 @@ post_body = {
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
