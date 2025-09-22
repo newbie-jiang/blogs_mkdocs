@@ -54,7 +54,7 @@ extra:
   generator: true
   social:
     - icon: material/rss
-      link: /blogs_mkdocs/rss.xml    # 若生成的是 /feed.xml，就改成 /feed.xml
+      link: link: https://newbie-jiang.github.io/blogs_mkdocs/rss.xml      # 若生成的是 /feed.xml，就改成 /feed.xm
       name: 订阅 RSS
 
 # （可选）把博客入口塞进导航；没有 nav 也能用，但放一个更易发现
