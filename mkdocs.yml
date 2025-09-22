@@ -1,9 +1,64 @@
+
 site_name: newbies博客站
+site_url: https://newbie-jiang.github.io/blogs_mkdocs/    # ★非常重要：用于生成 RSS 的绝对链接
+
 theme:
   name: material
   language: zh
+  features:
+    - content.code.copy
+  # （可选）暗/亮色
+  # palette:
+  #   - scheme: default
+  #     toggle:
+  #       icon: material/weather-night
+  #       name: 切换到夜间
+  #   - scheme: slate
+  #     toggle:
+  #       icon: material/weather-sunny
+  #       name: 切换到日间
+
+plugins:
+  - search
+  - blog             # Material 内置博客
+  - rss:
+      # 只把 blog/ 下的文章放进订阅；你的文章建议放 docs/blog/ 下
+      match_path: "blog/.*"
+      feed_ttl: 1440
+      use_git: true          # 无 front matter 日期时，回退到 Git 提交日期
+      date_from_meta:
+        as_creation: date    # 若 front matter 有 date 字段，则用它
+      length: 20             # 订阅里保留的最大条目数
+  - glightbox
+  # 任选其一做 SEO：
+  # - ultralytics
+  # - meta-descriptions
+  # （可选构建优化）
+  # - minify:
+  #     minify_html: true
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+extra:
+  generator: true
+  social:
+    - icon: material/rss
+      link: /rss.xml     # 若生成的是 /feed.xml，就改成 /feed.xml
+      name: 订阅 RSS
+
+# （可选）把博客入口塞进导航；没有 nav 也能用，但放一个更易发现
 # nav:
 #   - 首页: index.md
-
-
-  
+#   - 博客: blog/index.md
+#   - 订阅: rss.xml
