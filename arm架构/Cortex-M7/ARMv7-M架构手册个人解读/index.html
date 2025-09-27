@@ -5,10 +5,10 @@
       
       
       
-        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/arm%E6%9E%B6%E6%9E%84/Cortex-M7/ARMv7-M%28cortexM7%29%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C%E8%A7%A3%E8%AF%BB/">
+        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/arm%E6%9E%B6%E6%9E%84/Cortex-M7/ARMv7-M%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C%E4%B8%AA%E4%BA%BA%E8%A7%A3%E8%AF%BB/">
       
       
-        <link rel="prev" href="../../CMSIS%20%E6%96%87%E6%A1%A3/">
+        <link rel="prev" href="../ARMv7-M%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C/">
       
       
         <link rel="next" href="../ARM%E6%9E%B6%E6%9E%84%E5%A4%84%E7%90%86%E5%99%A8%E5%AF%B9%E7%85%A7%E8%A1%A8/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>ARMv7-M(cortexM7)架构手册 - newbies博客站</title>
+        <title>ARMv7-M架构手册个人解读 - newbies博客站</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#armv7-mcortexm7" class="md-skip">
+        <a href="#armv7-m" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ARMv7-M(cortexM7)架构手册
+              ARMv7-M架构手册个人解读
             
           </span>
         </div>
@@ -511,6 +511,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARMv7-M%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARMv7-M架构手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -523,17 +546,358 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ARMv7-M架构手册个人解读
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    ARMv7-M(cortexM7)架构手册
+    ARMv7-M架构手册个人解读
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#armv7-m-thumb" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARMv7-M 仅支持thumb指令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序员模型与特权
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序员模型与特权">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      范畴与定位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      特权模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      运行模式与复位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用与系统的交互（系统调用）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据类型和算数运算
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据类型和算数运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存中的数据类型（Memory）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器与寄存器中的数据（Registers）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      访存指令与扩展（Load/Store）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twos-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      有符号/无符号的数值范围（Two’s complement）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      64 位整数支持与常见写法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    <span class="md-ellipsis">
+      算术在 M 内核上的现实
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abi" class="md-nav__link">
+    <span class="md-ellipsis">
+      与 ABI/编译器的关系（会遇到的）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      饱和算数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armr0-r15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARM核心寄存器（R0-R15重要）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARM核心寄存器（R0-R15重要）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spstack-pointerr13" class="md-nav__link">
+    <span class="md-ellipsis">
+      SP（Stack Pointer，R13）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lrlink-registerr14" class="md-nav__link">
+    <span class="md-ellipsis">
+      LR（Link Register，R14）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcprogram-counterr15" class="md-nav__link">
+    <span class="md-ellipsis">
+      PC（Program Counter，R15）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用程序状态寄存器(APSR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用程序状态寄存器(APSR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apsr-armv7-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      APSR 位分布（Armv7-M）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      谁会更新这些标志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      C 与 V 的快速区分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用小贴士
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      “系统相关事件”与异常/中断机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“系统相关事件”与异常/中断机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统相关的异常类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os" class="md-nav__link">
+    <span class="md-ellipsis">
+      两个内置系统异常（OS 高频使用）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvic" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVIC：外部中断控制器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试相关
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      低功耗/同步提示指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      运行模式与特权回顾（与上述机制如何协作）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -553,6 +917,29 @@
   
   <span class="md-ellipsis">
     ARM架构处理器对照表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARM%E9%BB%91%E8%AF%9D%E9%80%9A%E8%AF%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ARM黑话通识
     
   </span>
   
@@ -5225,6 +5612,323 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#armv7-m-thumb" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARMv7-M 仅支持thumb指令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序员模型与特权
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="程序员模型与特权">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      范畴与定位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      特权模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      运行模式与复位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用与系统的交互（系统调用）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据类型和算数运算
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据类型和算数运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存中的数据类型（Memory）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器与寄存器中的数据（Registers）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      访存指令与扩展（Load/Store）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twos-complement" class="md-nav__link">
+    <span class="md-ellipsis">
+      有符号/无符号的数值范围（Two’s complement）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      64 位整数支持与常见写法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    <span class="md-ellipsis">
+      算术在 M 内核上的现实
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abi" class="md-nav__link">
+    <span class="md-ellipsis">
+      与 ABI/编译器的关系（会遇到的）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      饱和算数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armr0-r15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARM核心寄存器（R0-R15重要）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARM核心寄存器（R0-R15重要）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spstack-pointerr13" class="md-nav__link">
+    <span class="md-ellipsis">
+      SP（Stack Pointer，R13）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lrlink-registerr14" class="md-nav__link">
+    <span class="md-ellipsis">
+      LR（Link Register，R14）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcprogram-counterr15" class="md-nav__link">
+    <span class="md-ellipsis">
+      PC（Program Counter，R15）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用程序状态寄存器(APSR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用程序状态寄存器(APSR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apsr-armv7-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      APSR 位分布（Armv7-M）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      谁会更新这些标志
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-v" class="md-nav__link">
+    <span class="md-ellipsis">
+      C 与 V 的快速区分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用小贴士
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      “系统相关事件”与异常/中断机制
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="“系统相关事件”与异常/中断机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      系统相关的异常类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os" class="md-nav__link">
+    <span class="md-ellipsis">
+      两个内置系统异常（OS 高频使用）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvic" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVIC：外部中断控制器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试相关
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      低功耗/同步提示指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      运行模式与特权回顾（与上述机制如何协作）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5239,11 +5943,286 @@
 
 
 
-<h1 id="armv7-mcortexm7">ARMv7-M(cortexM7)架构手册<a class="headerlink" href="#armv7-mcortexm7" title="Permanent link">¶</a></h1>
-<p><strong>ARMv7-M Architecture Reference Manual</strong>（架构手册）</p>
-<p>讲清异常/中断模型、指令集（Thumb-2）、内存模型、调试寄存器等。Cortex-M7 属于 ARMv7E-M（在 v7-M 基础上加入 DSP/FPU 扩展），读这本是地基</p>
-<p>https://developer.arm.com/documentation/ddi0403/latest/?utm_source=chatgpt.com</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927222222177.png" data-desc-position="bottom"><img alt="image-20250927222222177" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927222222177.png"></a></p>
+<h1 id="armv7-m">ARMv7-M架构手册个人解读<a class="headerlink" href="#armv7-m" title="Permanent link">¶</a></h1>
+<h2 id="armv7-m-thumb">ARMv7-M 仅支持thumb指令<a class="headerlink" href="#armv7-m-thumb" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927234631649.png" data-desc-position="bottom"><img alt="image-20250927234631649" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927234631649.png"></a></p>
+<h2 id="_1">程序员模型与特权<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h3 id="_2">范畴与定位<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p><strong>两层程序员模型</strong>：</p>
+<ul>
+<li><strong>应用层程序员模型</strong>（本章 A2）：应用开发所需的寄存器/指令/异常返回等最小知识。</li>
+<li><strong>系统层程序员模型</strong>（B1 章）：为操作系统与系统服务准备的完整体系（异常控制、内存保护、调试、系统控制寄存器等）。</li>
+</ul>
+<h3 id="_3">特权模型<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>特权（privileged）/非特权（unprivileged）</strong> 两种权限级别。</li>
+<li><strong>系统代码</strong>决定应用以何种权限运行；<strong>操作系统</strong>同时支持两种模式，<strong>应用通常运行为非特权</strong>。</li>
+<li>运行为<strong>非特权</strong>的意义：</li>
+<li>允许 OS 把系统资源分配给应用（私有或共享）。</li>
+<li>提供进程/任务间隔离，保护 OS 不被故障应用拖垮。</li>
+</ul>
+<h3 id="_4">运行模式与复位<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Thread mode</strong>：应用执行的基本模式；<strong>复位后进入 Thread mode</strong>。</li>
+<li>Thread mode 可为 <strong>特权或非特权</strong>（应用常见为非特权）。</li>
+<li><strong>Handler mode</strong>：异常处理模式；<strong>所有异常都在 Handler mode 执行</strong>。</li>
+</ul>
+<h3 id="_5">应用与系统的交互（系统调用）<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>SVC 机制</strong>：Thread mode 可执行 <strong><code>SVC</code> 指令</strong>触发 <strong>SVCall 异常</strong>；处理在 <strong>Handler mode</strong> 由 SVC 处理例程完成。</li>
+<li><strong>SVCall 的职责</strong>：代表应用管理系统资源（如：外设访问、内存分配、软件栈管理等）。</li>
+<li><strong>替代路径</strong>：若 Thread mode 本身是特权态，亦可<strong>直接进行系统访问与控制</strong>（无需 SVC）。</li>
+</ul>
+<p>一句话流程图</p>
+<ul>
+<li>复位 → <strong>Thread mode</strong>（应用）
+   →（需要系统服务？）<strong>SVC</strong> → <strong>SVCall @ Handler mode</strong>（内核代办）→ 返回 <strong>Thread mode</strong> 继续执行。</li>
+</ul>
+<p>区分应用/系统两层模型；引入特权/非特权与其安全意义；明确 Thread/Handler 两种运行模式与<strong>“SVC=受控进入内核”</strong>的交互方式；</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927234545693.png" data-desc-position="bottom"><img alt="image-20250927234545693" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927234545693.png"></a></p>
+<h2 id="_6">数据类型和算数运算<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h3 id="memory">内存中的数据类型（Memory）<a class="headerlink" href="#memory" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Byte</strong>：8 位</li>
+<li><strong>Halfword</strong>：16 位</li>
+<li><strong>Word</strong>：32 位</li>
+<li>这只是<strong>存储宽度</strong>；CPU 取到寄存器里时，会按不同指令变成 32 位</li>
+</ul>
+<h3 id="registers">寄存器与寄存器中的数据（Registers）<a class="headerlink" href="#registers" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>通用寄存器 r0–r12, sp, lr, pc 都是 32 位</strong>。</li>
+<li>指令集支持把下列“逻辑类型”放在 32 位寄存器中使用：</li>
+<li><strong>32 位指针</strong>（地址宽度 32 位）。</li>
+<li><strong>有符号/无符号 32 位整数</strong>。</li>
+<li><strong>8/16 位整数（有/无符号）</strong>：放进寄存器时会被<strong>扩展为 32 位</strong>：<ul>
+<li>无符号 → <strong>零扩展</strong>（高位补 0）</li>
+<li>有符号 → <strong>符号扩展</strong>（复制符号位）</li>
+</ul>
+</li>
+<li><strong>64 位整数</strong>：占 <strong>两个 32 位寄存器</strong>（一高一低）。</li>
+</ul>
+<blockquote>
+<p>实操提示：在 C 里 <code>uint8_t/uint16_t</code> 被装入寄存器后就是 32 位参与运算；编译器会自动插入零扩展/符号扩展。</p>
+</blockquote>
+<h3 id="loadstore">访存指令与扩展（Load/Store）<a class="headerlink" href="#loadstore" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>按字节/半字/字</strong> 访问：</li>
+<li>读：<code>LDRB</code>(零扩展 8)、<code>LDRH</code>(零扩展 16)、<code>LDRSB</code>(符号扩展 8)、<code>LDRSH</code>(符号扩展 16)、<code>LDR</code>(32)</li>
+<li>写：<code>STRB</code>(8)、<code>STRH</code>(16)、<code>STR</code>(32) ——写入时只看寄存器的低 8/16/32 位</li>
+<li><strong>批量/双字访存</strong>：</li>
+<li>多寄存器：<code>LDM/STM</code>（含 <code>PUSH/POP</code> 的别名形式）</li>
+<li><strong>双字</strong>：<code>LDRD/STRD</code>（一次搬 64 位，使用一对寄存器）</li>
+</ul>
+<blockquote>
+<p>选择 <strong>LDRSB/LDRSH</strong> vs <strong>LDRB/LDRH</strong> 是“有/无符号”的关键：拿错会让负数变成大正数（经典 Bug）。</p>
+</blockquote>
+<h3 id="twos-complement">有符号/无符号的数值范围（Two’s complement）<a class="headerlink" href="#twos-complement" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>无符号 N 位</strong>：<code>0 … 2^N − 1</code></li>
+<li><strong>有符号 N 位</strong>（二补码）：<code>−2^(N−1) … 2^(N−1) − 1</code></li>
+<li>例如 8 位有符号：<code>−128 … +127</code></li>
+</ul>
+<h3 id="64">64 位整数支持与常见写法<a class="headerlink" href="#64" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>直接的 64 位指令很有限</strong>：大多数 64 位操作需要<strong>多条指令</strong>拼接。</p>
+</li>
+<li>
+<p>常用套路：</p>
+</li>
+<li>
+<p><strong>64 位加法</strong>（低 32 先加，带进位再加高 32）</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>// (r1:r0) += (r3:r2)   ; 低位在 r0/r2，高位在 r1/r3
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>ADDS r0, r0, r2   // 低 32 位，加并更新进位
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>ADC  r1, r1, r3   // 高 32 位 + 进位
+</span></code></pre></div></td></tr></tbody></table></div>
+</li>
+<li>
+<p><strong>64 位减法</strong>：<code>SUBS</code> 低位 + <code>SBC</code> 高位</p>
+</li>
+<li>
+<p><strong>32×32→64 乘法</strong>：有<strong>长乘</strong>指令 <code>UMULL/SMULL</code>（无符号/有符号），结果直接落两寄存器；乘加用 <code>UMLAL/SMLAL</code>。</p>
+</li>
+<li>
+<p><strong>64 位乘/除/移位</strong>：一般由编译器生成指令序列或调用软库（如 <code>__aeabi_lmul</code> 等）。</p>
+</li>
+<li>
+<p><strong>装/存 64 位</strong>：用 <code>LDRD/STRD</code>，或 <code>LDM/STM</code> 两个寄存器一起搬。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>原子性提醒</strong>：Armv7-M 没有“原子 64 位读写”指令；<code>LDRD/STRD</code> 不是不可分割原子操作。需要原子更新 64 位变量时，应关中断/用临界区/用互斥（或拆成 32 位原子）。</p>
+</blockquote>
+<h3 id="m">算术在 M 内核上的现实<a class="headerlink" href="#m" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>运算基宽是 32 位</strong>：大部分算术/逻辑指令都以 32 位为单位；8/16 位运算通常是对 32 位操作后再掩码。</li>
+<li><strong>性能与代码密度</strong>：Thumb-2 会在需要时选 32 位“宽指令”（例如带进位、复杂寻址），不必手写 ARM 模式。</li>
+<li><strong>对齐与双字</strong>：<code>LDRD/STRD</code> 期望对齐（未对齐性能差甚至硬 Fault，视实现与设置而定）；建议 8 字节对齐的 64 位对象。</li>
+</ul>
+<h3 id="abi">与 ABI/编译器的关系（会遇到的）<a class="headerlink" href="#abi" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>参数/返回</strong>：AAPCS 规定 64 位整数参数/返回值用<strong>寄存器对</strong>（如返回放 <code>r0:r1</code>），超出部分走栈。</p>
+</li>
+<li>
+<p><strong>常用编译选项（M7）</strong>：</p>
+</li>
+</ul>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>-mcpu=cortex-m7 -mthumb -O2 \
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>-mfpu=fpv5-sp-d16|fpv5-d16 -mfloat-abi=hard
+</span></code></pre></div></td></tr></tbody></table></div>
+<blockquote>
+<p>这里 FPU 只影响浮点，不改变整型数据规则。</p>
+</blockquote>
+<hr>
+<p>小结</p>
+<ul>
+<li><strong>内存：8/16/32</strong>；<strong>寄存器：32 位</strong>；<strong>64 位＝两寄存器</strong>。</li>
+<li><strong>装载即扩展</strong>：选对 <code>LDRB/LDRH/LDRSB/LDRSH</code>，避免符号错误。</li>
+<li><strong>64 位算术要拼</strong>：用 <code>ADDS+ADC</code>、<code>SUBS+SBC</code>、<code>UMULL/SMULL</code>；原子更新需临界区。</li>
+<li><strong>双字搬运用 LDRD/STRD 或 LDM/STM</strong>，并保证对齐与配对寄存器使用。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927235603206.png" data-desc-position="bottom"><img alt="image-20250927235603206" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250927235603206.png"></a></p>
+<h2 id="_7">饱和算数<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<p><strong>饱和算术</strong>：当运算结果超出数据类型可表示范围时，不按 2N2^N2N 回绕，而是被<strong>钳制</strong>到上下界（最大/最小值；部分指令同时置饱和标志 Q）。</p>
+<ul>
+<li><strong>普通整数溢出</strong>（按 2^N 取模）会“绕回去”。
+   比如 8 位有符号：<code>120 + 120 = 240</code>，按 8 位二补码会变成 <strong>-16</strong>（溢出 wrap-around）。</li>
+<li><strong>饱和算术</strong>不会绕回：结果被<strong>夹紧到可表示范围的上下界</strong>。
+   同例在 8 位有符号范围 [-128, 127] 内：<code>120 + 120</code> 被<strong>夹到 127</strong>；
+   8 位无符号范围 [0, 255] 内：<code>250 + 30</code> 被<strong>夹到 255</strong>。</li>
+</ul>
+<p>某些 ARM 指令是“带饱和”的；手册用 <code>SignedSat(Q)</code> / <code>UnsignedSat(Q)</code> 这类<strong>伪代码函数</strong>来精确定义“<strong>先算</strong> → <strong>再按 N 位上下界夹紧</strong>（并可报告是否饱和）”的行为。实际硬件上，发生饱和还会通过 <strong>Q 标志</strong>反映出来。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928002329628.png" data-desc-position="bottom"><img alt="image-20250928002329628" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928002329628.png"></a></p>
+<h2 id="armr0-r15">ARM核心寄存器（R0-R15重要）<a class="headerlink" href="#armr0-r15" title="Permanent link">¶</a></h2>
+<ul>
+<li>13个通用的寄存器，R0-R12  </li>
+<li>3个具有特殊名称的寄存器和使用模式的寄存器 （SP LR PC）</li>
+</ul>
+<h3 id="spstack-pointerr13">SP（Stack Pointer，R13）<a class="headerlink" href="#spstack-pointerr13" title="Permanent link">¶</a></h3>
+<ul>
+<li>指向<strong>当前活动栈顶</strong>。Cortex-M 有两套栈：<strong>MSP</strong>（Main Stack）和 <strong>PSP</strong>（Process Stack）；<code>SP</code> 这个别名指向“当前选中的那一个”。</li>
+<li><strong>上电复位</strong>：从向量表第 0 项装载 <strong>MSP 初值</strong>，并默认使用 <strong>MSP</strong>。</li>
+<li><strong>Thread 模式</strong>可用 <code>CONTROL.SPSEL</code> 选择 PSP；<strong>Handler 模式（所有异常）始终用 MSP</strong>。</li>
+<li>AAPCS 要求：在任何公共接口处 <strong>SP 必须 8 字节对齐</strong>。</li>
+<li>指令限制：<code>PUSH/POP</code>、<code>STM/ LDM</code> 会隐式更新 SP；把 SP 当一般算术寄存器使用是受限的（详见“将 R13 作为寄存器号的用法限制”）。</li>
+</ul>
+<h3 id="lrlink-registerr14">LR（Link Register，R14）<a class="headerlink" href="#lrlink-registerr14" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>子程序返回链接寄存器</strong>：执行 <code>BL/BLX</code> 时，<strong>返回地址</strong>会写入 LR。Thumb 状态下该地址最低位为 1（表示 Thumb）。</li>
+<li><strong>复位时 LR=0xFFFFFFFF</strong>：若程序直接“用它返回”，会触发 Fault（用于防呆）。</li>
+<li><strong>异常入口</strong>：硬件把 <strong>EXC_RETURN 常量</strong>（形如 <code>0xFFFFFFF1/…F9/FD</code>）写入 LR，编码了“从哪种栈返回、是否有浮点上下文”等。执行 <code>BX LR</code> 时，硬件据此执行<strong>异常返回</strong>。</li>
+<li>当不需要作返回链接时，<strong>LR 也可充当通用暂存寄存器</strong>（但被调函数要负责恢复它）。</li>
+</ul>
+<h3 id="pcprogram-counterr15">PC（Program Counter，R15）<a class="headerlink" href="#pcprogram-counterr15" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>程序计数器</strong>。复位时从向量表第 1 项装载 <strong>Reset Handler 地址</strong>到 PC。Cortex-M 只运行 <strong>Thumb/Thumb-2</strong>，PC 的目标地址<strong>最低位必须为 1</strong>（非 1 会触发 UsageFault，硬件取指时会忽略该位）。</li>
+<li><strong>读取 PC</strong> 时得到的是“当前指令地址 + 4”的值（因流水线预取）；<strong>写 PC</strong> 等价于分支跳转（如 <code>BX/BLX/POP {…,pc}</code>、<code>LDR pc,[addr]</code>）。</li>
+<li>把 <code>R15</code>当作一般寄存器有多项限制，具体见手册相应条目。</li>
+</ul>
+<p><strong>实用小结</strong></p>
+<ul>
+<li>复位：<code>MSP ← VTOR[0]</code>，<code>PC ← VTOR[1]</code>，<code>LR ← 0xFFFFFFFF</code>。</li>
+<li>应用在 <strong>Thread 模式</strong>常用 <strong>PSP</strong>，内核/异常在 <strong>Handler 模式</strong>用 <strong>MSP</strong>。</li>
+<li>返回路径：普通函数 <code>POP {…, pc}</code> 或 <code>BX lr</code>；异常返回用装在 LR 里的 <strong>EXC_RETURN</strong> + <code>BX lr</code>。</li>
+<li>始终保持 <strong>SP 8 字节对齐</strong>，并正确保存/恢复 LR 与需要的寄存器，以满足 <strong>AAPCS</strong>。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928002955490.png" data-desc-position="bottom"><img alt="image-20250928002955490" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928002955490.png"></a></p>
+<h2 id="apsr">应用程序状态寄存器(APSR)<a class="headerlink" href="#apsr" title="Permanent link">¶</a></h2>
+<p><strong>The Application Program Status Register (APSR)</strong></p>
+<h3 id="apsr-armv7-m">APSR 位分布（Armv7-M）<a class="headerlink" href="#apsr-armv7-m" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>N[31]</strong>：负号标志。结果视作有符号数时，N=结果的 bit31。</li>
+<li><strong>Z[30]</strong>：零标志。结果为 0 → Z=1，否则 0。</li>
+<li><strong>C[29]</strong>：进位/不借位标志。加法的<strong>无符号进位</strong>或减法的<strong>不借位</strong>置 1；与有符号溢出（V）不同。</li>
+<li><strong>V[28]</strong>：有符号溢出标志。加/减后结果超出有符号范围（例如正+正得负，负+负得正）置 1。</li>
+<li><strong>Q[27]</strong>：<strong>饱和标志</strong>（sticky）。执行 <code>SSAT/USAT</code>、<code>QADD/QSUB/...</code> 等发生饱和时置 1，<strong>保持为 1 直到软件清零</strong>（<code>MSR APSR_nzcvq, Rn</code> 写 0 到 Q）。</li>
+<li><strong>GE[19:16]</strong>（仅带 <strong>DSP 扩展</strong>的内核，如 Cortex-M7）：<strong>Greater-or-Equal</strong> 标志组，按<strong>并行字节/半字</strong>记录比较或算术每个“lane”的≥关系，供 <code>SEL</code> 等 SIMD 指令按位选择。无 DSP 的核上这些位保留。</li>
+<li>其他位 <strong>Reserved</strong>：为系统保留/未来扩展；应用读出时<strong>忽略</strong>，写入时必须<strong>保持原值</strong>（UNK/SBZP 语义）。</li>
+</ul>
+<h3 id="_8">谁会更新这些标志<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<ul>
+<li>绝大多数算术/逻辑指令的 <strong>S</strong> 版本、比较/测试指令：<code>ADDS/SUBS/ANDS/ORRS/EORS/CMP/CMN/TST/TEQ</code> 等。</li>
+<li>移位立即数会把移出的最后一位写到 <strong>C</strong>。</li>
+<li><strong>饱和/并行</strong>指令会更新 <strong>Q</strong>，部分 SIMD 会更新 <strong>GE</strong>。</li>
+<li>普通乘法通常不改 NZCV（除非带 S 的特定形式）。</li>
+</ul>
+<h3 id="c-v">C 与 V 的快速区分<a class="headerlink" href="#c-v" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>C</strong> 看“无符号进位/不借位”；<strong>V</strong> 看“有符号溢出”。</li>
+<li>例：<code>0xFFFFFFFF + 1</code> → C=1（进位），V=0（无符号正常，有符号从 −1 到 0 没溢出）。</li>
+<li>例：<code>0x7FFFFFFF + 1</code> → C=0，<strong>V=1</strong>（正溢出）。</li>
+</ul>
+<h3 id="_9">使用小贴士<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<ul>
+<li>比较用 <code>CMP</code>：等价于 <code>SUBS</code> 只写标志（常用 <code>BEQ/BNE/BCC/BCS/BMI/BPL/BVS/BVC</code> 分支）。</li>
+<li>发生饱和后如果要继续“干净”地运算，<strong>别忘清 Q</strong>：<code>MSR APSR_nzcvq, #0</code>。</li>
+<li>需要按字节/半字做条件选择时，先用 SIMD 指令更新 <strong>GE</strong>，再用 <code>SEL</code> 依据 GE 逐 lane 选数。</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928004353782.png" data-desc-position="bottom"><img alt="image-20250928004353782" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928004353782.png"></a></p>
+<h2 id="_10">“系统相关事件”与异常/中断机制<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
+<h3 id="_11">系统相关的异常类型<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>SVC（Supervisor Call）</strong>：应用在 <strong>Thread 模式、非特权</strong>时，用 <code>SVC</code> 指令<strong>同步</strong>陷入内核，请求特权服务（系统调用）。</li>
+<li><strong>Fault（故障类异常）</strong>：</li>
+<li><strong>取指错误</strong>（指令访问相关，如取指到不可执行区域）。</li>
+<li><strong>数据访问错误</strong>（任意 <code>load/store</code> 的存储器访问出错，如总线/MPU 违规）。</li>
+<li><strong>UsageFault</strong>（执行状态错误，如<strong>未定义指令</strong>、非法状态、除零等）。</li>
+<li><strong>DebugMonitor</strong>（调试事件引发的监控异常）。
+     这些故障通常与导致它的那条指令<strong>同步</strong>发生；但也有<strong>不精确异常</strong>（例如写缓冲延迟导致的总线错误，报告时间与致因指令不严格对应）。</li>
+<li><strong>Interrupt（外部中断）</strong>：始终被处理器视为<strong>异步</strong>于程序流（由 NVIC 管理）。</li>
+</ul>
+<blockquote>
+<p>精确 vs 不精确：精确异常能指向“当前指令”；不精确异常可能在之后才报告（典型：缓冲写导致的 BusFault）。</p>
+</blockquote>
+<h3 id="os">两个内置系统异常（OS 高频使用）<a class="headerlink" href="#os" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>SysTick</strong>：片内系统定时器及其中断（节拍、调度心跳、时间片等）。</li>
+<li><strong>PendSV（延迟的 SVC）</strong>：</li>
+<li>不是用指令触发，而是<strong>软件置位</strong> <code>ICSR.PENDSVSET=1</code> 让异常<strong>挂起</strong>；何时被处理取决于<strong>优先级模型</strong>。</li>
+<li>常用法：<strong>把 PendSV 设为最低优先级</strong>，在需要“安全点”时再切任务（上下文切换）。</li>
+<li>典型调度路径：<strong>SysTick/外部中断</strong>里决定需要切换 → 置位 <strong>PendSV</strong> → 中断返回时进入 <strong>PendSV Handler</strong> 执行上下文切换。</li>
+<li><strong>SVC vs PendSV</strong>：<code>SVC</code> 是<strong>同步立即</strong>陷入；<strong>PendSV</strong> 是<strong>延迟到合适时机</strong>再处理，避免在关键区打断。</li>
+</ul>
+<p>简要代码：</p>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>// 触发 PendSV
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>SCB-&gt;ICSR = SCB_ICSR_PENDSVSET_Msk;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>// 触发 SVC（同步）
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>__asm volatile ("svc #0");
+</span></code></pre></div></td></tr></tbody></table></div>
+<h3 id="nvic">NVIC：外部中断控制器<a class="headerlink" href="#nvic" title="Permanent link">¶</a></h3>
+<ul>
+<li>负责外设中断的<strong>使能/挂起/清除/优先级</strong>，决定中断/异常的抢占关系与响应次序。</li>
+</ul>
+<h3 id="_12">调试相关<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>BKPT</strong> 指令会生成调试事件（通常进入 DebugMonitor 或由调试器捕获）。</li>
+</ul>
+<h3 id="_13">低功耗/同步提示指令<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>WFI（Wait For Interrupt）</strong>：等待<strong>中断</strong>唤醒；常用于省电/空闲。</li>
+<li><strong>WFE（Wait For Event）</strong> 和 <strong>SEV（Send Event）</strong>：事件机制；</li>
+<li><code>SEV</code> 置位“事件寄存器”，使下一条 <code>WFE</code> <strong>不休眠直接返回</strong>；</li>
+<li><code>WFE</code> 既可被事件唤醒，也可被中断唤醒，适合<strong>任务间轻量提示/省电</strong>。</li>
+<li>常见配套：在进入 <code>WFI/WFE</code> 前做一次 <strong>DSB/ISB</strong>，避免竞态。</li>
+</ul>
+<h3 id="_14">运行模式与特权回顾（与上述机制如何协作）<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Thread 模式</strong>：应用运行的基础模式，可<strong>特权或非特权</strong>；复位进入此模式。</li>
+<li><strong>Handler 模式</strong>：处理<strong>所有异常</strong>，<strong>总是特权</strong>。</li>
+<li>非特权应用需要系统服务 → <code>SVC</code> 同步进入 <strong>Handler</strong>；调度/上下文切换 → 借助 <strong>PendSV</strong> 延迟处理。</li>
+</ul>
+<p><strong>一句话总结</strong>：
+ Armv7-M 提供了 SVC、Fault、SysTick、PendSV、NVIC、BKPT 以及 WFI/WFE/SEV 等机制，支撑“<strong>应用非特权运行 + 通过 SVC 请求内核服务 + 用 PendSV 在合适时机做调度/切换 + NVIC 管外部中断 + 低功耗等待</strong>”这一整套现代嵌入式 OS 运行模型。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928005426073.png" data-desc-position="bottom"><img alt="image-20250928005426073" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928005426073.png"></a><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928005442693.png" data-desc-position="bottom"><img alt="image-20250928005442693" src="https://newbie-typora.oss-cn-shenzhen.aliyuncs.com/TyporaJPG/image-20250928005442693.png"></a></p>
 
 
 

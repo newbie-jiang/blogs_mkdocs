@@ -5,28 +5,28 @@
       
       
       
-        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/1.%E5%BC%80%E5%8F%91%E6%9D%BF%E5%8F%B0%E4%BB%8B%E7%BB%8D/">
+        <link rel="canonical" href="https://newbie-jiang.github.io/blogs_mkdocs/arm%E6%9E%B6%E6%9E%84/Cortex-M7/ARM%E9%BB%91%E8%AF%9D%E9%80%9A%E8%AF%86/">
       
       
-        <link rel="prev" href="../../%E5%85%88%E8%BE%91/%E5%85%88%E6%A5%AB%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+        <link rel="prev" href="../ARM%E6%9E%B6%E6%9E%84%E5%A4%84%E7%90%86%E5%99%A8%E5%AF%B9%E7%85%A7%E8%A1%A8/">
       
       
-        <link rel="next" href="../2.%E9%A9%B1%E5%8A%A8%E4%BB%A5%E5%8F%8A%E4%B8%8B%E8%BD%BD%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/">
+        <link rel="next" href="../Cortex-M7%E9%80%9A%E7%94%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>1.开发板台介绍 - newbies博客站</title>
+        <title>ARM黑话通识 - newbies博客站</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
       
 
@@ -45,14 +45,14 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#arm" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="newbies博客站" class="md-header__button md-logo" aria-label="newbies博客站" data-md-component="logo">
+    <a href="../../.." title="newbies博客站" class="md-header__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1.开发板台介绍
+              ARM黑话通识
             
           </span>
         </div>
@@ -183,7 +188,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="newbies博客站" class="md-nav__button md-logo" aria-label="newbies博客站" data-md-component="logo">
+    <a href="../../.." title="newbies博客站" class="md-nav__button md-logo" aria-label="newbies博客站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -201,7 +206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -261,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/1.Gemini%20%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+      <a href="../../../ai/1.Gemini%20%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/" class="md-nav__link">
         
   
   
@@ -284,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/2.Gemini%20%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/" class="md-nav__link">
+      <a href="../../../ai/2.Gemini%20%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BC%98%E5%8C%96%E6%80%9D%E8%B7%AF/" class="md-nav__link">
         
   
   
@@ -307,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai/edg-tts%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+      <a href="../../../ai/edg-tts%E6%B5%8B%E8%AF%95/" class="md-nav__link">
         
   
   
@@ -334,18 +339,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -361,7 +368,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Arm架构
@@ -375,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/1.%E4%BB%A5stm32f103c8t6%E4%B8%BA%E4%BE%8B%EF%BC%8C%E4%BA%86%E8%A7%A3%E4%BB%A3%E7%A0%81%E6%98%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E7%BC%96%E8%AF%91%E5%87%BA%E6%9D%A5%E7%9A%84/" class="md-nav__link">
+      <a href="../../1.%E4%BB%A5stm32f103c8t6%E4%B8%BA%E4%BE%8B%EF%BC%8C%E4%BA%86%E8%A7%A3%E4%BB%A3%E7%A0%81%E6%98%AF%E5%A6%82%E4%BD%95%E8%A2%AB%E7%BC%96%E8%AF%91%E5%87%BA%E6%9D%A5%E7%9A%84/" class="md-nav__link">
         
   
   
@@ -398,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/2.at32f437-surf%20keil%E5%B7%A5%E7%A8%8B%E6%94%B9%E9%80%A0arm%20gcc%2Bcmake/" class="md-nav__link">
+      <a href="../../2.at32f437-surf%20keil%E5%B7%A5%E7%A8%8B%E6%94%B9%E9%80%A0arm%20gcc%2Bcmake/" class="md-nav__link">
         
   
   
@@ -421,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/3.KeilARM%20%E5%B7%A5%E7%A8%8B%EF%BC%88%E4%BB%A5%20ARMCCARMCLANG%20%E5%B7%A5%E5%85%B7%E9%93%BE%E4%B8%BA%E4%BE%8B%EF%BC%89%E4%B8%8B%20BSS%20%E6%AE%B5%E6%B8%85%E9%9B%B6%20%E7%9A%84%E7%9C%9F%E5%AE%9E%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+      <a href="../../3.KeilARM%20%E5%B7%A5%E7%A8%8B%EF%BC%88%E4%BB%A5%20ARMCCARMCLANG%20%E5%B7%A5%E5%85%B7%E9%93%BE%E4%B8%BA%E4%BE%8B%EF%BC%89%E4%B8%8B%20BSS%20%E6%AE%B5%E6%B8%85%E9%9B%B6%20%E7%9A%84%E7%9C%9F%E5%AE%9E%E6%B5%81%E7%A8%8B/" class="md-nav__link">
         
   
   
@@ -444,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/CMSIS%20%E6%96%87%E6%A1%A3/" class="md-nav__link">
+      <a href="../../CMSIS%20%E6%96%87%E6%A1%A3/" class="md-nav__link">
         
   
   
@@ -464,18 +471,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -491,7 +500,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             Cortex M7
@@ -505,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/ARMv7-M%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C/" class="md-nav__link">
+      <a href="../ARMv7-M%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C/" class="md-nav__link">
         
   
   
@@ -528,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/ARMv7-M%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C%E4%B8%AA%E4%BA%BA%E8%A7%A3%E8%AF%BB/" class="md-nav__link">
+      <a href="../ARMv7-M%E6%9E%B6%E6%9E%84%E6%89%8B%E5%86%8C%E4%B8%AA%E4%BA%BA%E8%A7%A3%E8%AF%BB/" class="md-nav__link">
         
   
   
@@ -551,7 +560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/ARM%E6%9E%B6%E6%9E%84%E5%A4%84%E7%90%86%E5%99%A8%E5%AF%B9%E7%85%A7%E8%A1%A8/" class="md-nav__link">
+      <a href="../ARM%E6%9E%B6%E6%9E%84%E5%A4%84%E7%90%86%E5%99%A8%E5%AF%B9%E7%85%A7%E8%A1%A8/" class="md-nav__link">
         
   
   
@@ -571,10 +580,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/ARM%E9%BB%91%E8%AF%9D%E9%80%9A%E8%AF%86/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ARM黑话通识
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -585,6 +616,233 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#armthumb" class="md-nav__link">
+    <span class="md-ellipsis">
+      arm指令集和Thumb指令集区别
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="arm指令集和Thumb指令集区别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键差异
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumb-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么 Thumb-2 成为主流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#it" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件执行与 IT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态切换与互操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      编译器与选项
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aapcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      AAPCS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AAPCS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      是什么 &amp; 作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      适用范围
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      调用约定（核心规则）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮点变体（务必全工程一致）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据与布局（跨函数/库的一致性）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      变参函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumb-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      与 Thumb-2/函数指针
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      写汇编时的最小守则
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saturating-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      饱和算术 (saturating arithmetic)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      特权执行
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特权执行">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心概念（一句话版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      这对系统/应用各自意味着什么
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cortex-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 Cortex-M 上会见到的落地
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要这样设计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -597,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/Cortex-M7%E9%80%9A%E7%94%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="md-nav__link">
+      <a href="../Cortex-M7%E9%80%9A%E7%94%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="md-nav__link">
         
   
   
@@ -620,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/CortexM7%E5%86%85%E6%A0%B8%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/" class="md-nav__link">
+      <a href="../CortexM7%E5%86%85%E6%A0%B8%E6%8A%80%E6%9C%AF%E5%8F%82%E8%80%83/" class="md-nav__link">
         
   
   
@@ -643,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/STM32F7%E5%92%8CH7%E4%B8%8A%E7%9A%84%E7%BC%93%E5%AD%98/" class="md-nav__link">
+      <a href="../STM32F7%E5%92%8CH7%E4%B8%8A%E7%9A%84%E7%BC%93%E5%AD%98/" class="md-nav__link">
         
   
   
@@ -666,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arm%E6%9E%B6%E6%9E%84/Cortex-M7/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="md-nav__link">
+      <a href="../%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" class="md-nav__link">
         
   
   
@@ -744,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   
@@ -767,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -835,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cmake/cmake-gui/" class="md-nav__link">
+      <a href="../../../cmake/cmake-gui/" class="md-nav__link">
         
   
   
@@ -858,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cmake/cmake-gui%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/" class="md-nav__link">
+      <a href="../../../cmake/cmake-gui%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0/" class="md-nav__link">
         
   
   
@@ -881,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cmake/cmake-gui%E6%94%AF%E6%8C%81%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/" class="md-nav__link">
+      <a href="../../../cmake/cmake-gui%E6%94%AF%E6%8C%81%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA/" class="md-nav__link">
         
   
   
@@ -949,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lib/1.crc%E6%A0%A1%E9%AA%8C%E5%BA%93%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../lib/1.crc%E6%A0%A1%E9%AA%8C%E5%BA%93%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -972,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lib/2.zlib%E5%8E%8B%E7%BC%A9%E8%A3%A4%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../lib/2.zlib%E5%8E%8B%E7%BC%A9%E8%A3%A4%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -995,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lib/3.miniz%E5%8E%8B%E7%BC%A9%E5%BA%93%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../lib/3.miniz%E5%8E%8B%E7%BC%A9%E5%BA%93%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -1063,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/buildroot%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%B6%E4%BD%9C/" class="md-nav__link">
+      <a href="../../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/buildroot%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%B6%E4%BD%9C/" class="md-nav__link">
         
   
   
@@ -1086,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/busybox%E5%88%B6%E4%BD%9C%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+      <a href="../../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/busybox%E5%88%B6%E4%BD%9C%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
         
   
   
@@ -1109,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/kernel%E5%90%AF%E5%8A%A8/" class="md-nav__link">
+      <a href="../../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/kernel%E5%90%AF%E5%8A%A8/" class="md-nav__link">
         
   
   
@@ -1132,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+      <a href="../../../linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/" class="md-nav__link">
         
   
   
@@ -1238,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/1.%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="md-nav__link">
         
   
   
@@ -1261,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/2.%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%93%BE%E5%AE%89%E8%A3%85/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/2.%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%93%BE%E5%AE%89%E8%A3%85/" class="md-nav__link">
         
   
   
@@ -1284,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/3.uboot%E7%BC%96%E8%AF%91/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/3.uboot%E7%BC%96%E8%AF%91/" class="md-nav__link">
         
   
   
@@ -1307,7 +1565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/4.kernel%E7%BC%96%E8%AF%91/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/4.kernel%E7%BC%96%E8%AF%91/" class="md-nav__link">
         
   
   
@@ -1330,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/5.%E7%83%A7%E5%BD%95uboot%E5%88%B0sd%E5%8D%A1/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/5.%E7%83%A7%E5%BD%95uboot%E5%88%B0sd%E5%8D%A1/" class="md-nav__link">
         
   
   
@@ -1353,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/6.uboot%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/6.uboot%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="md-nav__link">
         
   
   
@@ -1376,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/7.nfs%E8%AE%BE%E7%BD%AE%E4%BB%A5%E5%8F%8A%E6%8C%82%E8%BD%BDkernel%E4%BB%A5%E5%8F%8Adts/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/7.nfs%E8%AE%BE%E7%BD%AE%E4%BB%A5%E5%8F%8A%E6%8C%82%E8%BD%BDkernel%E4%BB%A5%E5%8F%8Adts/" class="md-nav__link">
         
   
   
@@ -1399,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/8.%E6%80%BB%E7%BB%93/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/1.ATK-6ull%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/8.%E6%80%BB%E7%BB%93/" class="md-nav__link">
         
   
   
@@ -1468,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/1.linux%E9%A9%B1%E5%8A%A8%E5%88%86%E7%B1%BB/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/1.linux%E9%A9%B1%E5%8A%A8%E5%88%86%E7%B1%BB/" class="md-nav__link">
         
   
   
@@ -1491,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/2.%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/2.%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E7%9A%84%E6%A6%82%E5%BF%B5/" class="md-nav__link">
         
   
   
@@ -1514,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/3.%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/3.%E7%94%A8%E6%88%B7%E7%A9%BA%E9%97%B4%E4%B8%8E%E5%86%85%E6%A0%B8%E7%A9%BA%E9%97%B4%E7%9A%84%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D/" class="md-nav__link">
         
   
   
@@ -1537,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/4.%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E9%A9%B1%E5%8A%A8/" class="md-nav__link">
+      <a href="../../../linux%E9%A9%B1%E5%8A%A8/2.ATK-6ull%E9%A9%B1%E5%8A%A8/4.%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E9%A9%B1%E5%8A%A8/" class="md-nav__link">
         
   
   
@@ -1613,7 +1871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lvgl/1.%E5%BF%AB%E9%80%9F%E7%A7%BB%E6%A4%8Dlvgl/" class="md-nav__link">
+      <a href="../../../lvgl/1.%E5%BF%AB%E9%80%9F%E7%A7%BB%E6%A4%8Dlvgl/" class="md-nav__link">
         
   
   
@@ -1636,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lvgl/2.LVGL%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+      <a href="../../../lvgl/2.LVGL%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="md-nav__link">
         
   
   
@@ -1659,7 +1917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lvgl/3.LVGL%E7%A7%BB%E6%A4%8D%E9%A2%9C%E8%89%B2%E4%B8%8D%E5%AF%B9%E4%B8%8E%E7%8E%B0%E5%AE%9E%E7%B3%8A%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../../lvgl/3.LVGL%E7%A7%BB%E6%A4%8D%E9%A2%9C%E8%89%B2%E4%B8%8D%E5%AF%B9%E4%B8%8E%E7%8E%B0%E5%AE%9E%E7%B3%8A%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   
@@ -1682,7 +1940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lvgl/4.code%20blocks%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%90%E8%A1%8Clvgl/" class="md-nav__link">
+      <a href="../../../lvgl/4.code%20blocks%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%90%E8%A1%8Clvgl/" class="md-nav__link">
         
   
   
@@ -1750,7 +2008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../n8n/1.%E4%BB%80%E4%B9%88%E6%98%AFn8n/" class="md-nav__link">
+      <a href="../../../n8n/1.%E4%BB%80%E4%B9%88%E6%98%AFn8n/" class="md-nav__link">
         
   
   
@@ -1773,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../n8n/2.ubuntu%20docker%E5%AE%89%E8%A3%85n8n/" class="md-nav__link">
+      <a href="../../../n8n/2.ubuntu%20docker%E5%AE%89%E8%A3%85n8n/" class="md-nav__link">
         
   
   
@@ -1796,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../n8n/3.%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="md-nav__link">
+      <a href="../../../n8n/3.%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="md-nav__link">
         
   
   
@@ -1819,7 +2077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../n8n/4.%E8%A7%A6%E5%8F%91%E5%99%A8%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+      <a href="../../../n8n/4.%E8%A7%A6%E5%8F%91%E5%99%A8%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
         
   
   
@@ -1842,7 +2100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../n8n/5.%E5%8A%A8%E4%BD%9C%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+      <a href="../../../n8n/5.%E5%8A%A8%E4%BD%9C%E8%8A%82%E7%82%B9%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
         
   
   
@@ -1865,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../n8n/6.nginx%E4%B8%8E%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/" class="md-nav__link">
+      <a href="../../../n8n/6.nginx%E4%B8%8E%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/" class="md-nav__link">
         
   
   
@@ -1888,7 +2146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../n8n/6.%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%B7%A5%E4%BD%9C%E6%B5%81telegramBot%E6%8E%A5%E5%85%A5deepseek%E5%AF%B9%E8%AF%9D/" class="md-nav__link">
+      <a href="../../../n8n/6.%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%B7%A5%E4%BD%9C%E6%B5%81telegramBot%E6%8E%A5%E5%85%A5deepseek%E5%AF%B9%E8%AF%9D/" class="md-nav__link">
         
   
   
@@ -1956,7 +2214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nordic/nordic%20sdk%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%A8%8B%E5%BA%8F/" class="md-nav__link">
+      <a href="../../../nordic/nordic%20sdk%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E7%A8%8B%E5%BA%8F/" class="md-nav__link">
         
   
   
@@ -2024,7 +2282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/1.vmware%E5%AE%89%E8%A3%85istoreos/" class="md-nav__link">
+      <a href="../../../openwrt/1.vmware%E5%AE%89%E8%A3%85istoreos/" class="md-nav__link">
         
   
   
@@ -2047,7 +2305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/2.vmware%E5%AE%89%E8%A3%85istoreos%E5%8F%AA%E6%9C%8910M%E7%BD%91%E7%BB%9C%E8%A7%A3%E5%86%B3/" class="md-nav__link">
+      <a href="../../../openwrt/2.vmware%E5%AE%89%E8%A3%85istoreos%E5%8F%AA%E6%9C%8910M%E7%BD%91%E7%BB%9C%E8%A7%A3%E5%86%B3/" class="md-nav__link">
         
   
   
@@ -2070,7 +2328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/3.openwrt%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/" class="md-nav__link">
+      <a href="../../../openwrt/3.openwrt%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/" class="md-nav__link">
         
   
   
@@ -2093,7 +2351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/4.passwall%E5%92%8Cpasswall2%E5%A6%82%E4%BD%95%E9%80%89/" class="md-nav__link">
+      <a href="../../../openwrt/4.passwall%E5%92%8Cpasswall2%E5%A6%82%E4%BD%95%E9%80%89/" class="md-nav__link">
         
   
   
@@ -2116,7 +2374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/5.openwrt%E6%97%81%E8%B7%AF%E7%94%B1/" class="md-nav__link">
+      <a href="../../../openwrt/5.openwrt%E6%97%81%E8%B7%AF%E7%94%B1/" class="md-nav__link">
         
   
   
@@ -2139,7 +2397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/6.passwall%E8%A7%84%E5%88%99%E5%88%97%E8%A1%A8/" class="md-nav__link">
+      <a href="../../../openwrt/6.passwall%E8%A7%84%E5%88%99%E5%88%97%E8%A1%A8/" class="md-nav__link">
         
   
   
@@ -2207,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/ST%E4%BA%91%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%94%B5%E6%9C%BA%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+      <a href="../../../other/ST%E4%BA%91%E5%AE%9E%E9%AA%8C%E5%AE%A4%E7%94%B5%E6%9C%BA%E6%B5%8B%E8%AF%95/" class="md-nav__link">
         
   
   
@@ -2230,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/%E7%99%BE%E9%97%AE%E7%BD%91%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%E6%8E%A7%E5%88%B6%E7%BD%91%E9%A1%B5/" class="md-nav__link">
+      <a href="../../../other/%E7%99%BE%E9%97%AE%E7%BD%91%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%E6%8E%A7%E5%88%B6%E7%BD%91%E9%A1%B5/" class="md-nav__link">
         
   
   
@@ -2298,7 +2556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../st67w61/1.st67w61%E8%AF%84%E6%B5%8B-%E7%83%A7%E5%BD%95/" class="md-nav__link">
+      <a href="../../../st67w61/1.st67w61%E8%AF%84%E6%B5%8B-%E7%83%A7%E5%BD%95/" class="md-nav__link">
         
   
   
@@ -2321,7 +2579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../st67w61/2.st67w61%E8%AF%84%E6%B5%8B-%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+      <a href="../../../st67w61/2.st67w61%E8%AF%84%E6%B5%8B-%E6%B5%8B%E8%AF%95/" class="md-nav__link">
         
   
   
@@ -2344,7 +2602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../st67w61/st67w61%20io%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../st67w61/st67w61%20io%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -2367,7 +2625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../st67w61/st67w61%E6%B7%BB%E5%8A%A0https%E8%AF%81%E4%B9%A6/" class="md-nav__link">
+      <a href="../../../st67w61/st67w61%E6%B7%BB%E5%8A%A0https%E8%AF%81%E4%B9%A6/" class="md-nav__link">
         
   
   
@@ -2435,7 +2693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/1.cmake%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../stm32_cmake/1.cmake%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -2458,7 +2716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/2.camke_for_vscode/" class="md-nav__link">
+      <a href="../../../stm32_cmake/2.camke_for_vscode/" class="md-nav__link">
         
   
   
@@ -2481,7 +2739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/3.stm32_cmake_for_ubuntu/" class="md-nav__link">
+      <a href="../../../stm32_cmake/3.stm32_cmake_for_ubuntu/" class="md-nav__link">
         
   
   
@@ -2504,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/4.linux%E4%B8%8Bcubeprogrammer%E5%AE%89%E8%A3%85%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="md-nav__link">
+      <a href="../../../stm32_cmake/4.linux%E4%B8%8Bcubeprogrammer%E5%AE%89%E8%A3%85%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="md-nav__link">
         
   
   
@@ -2527,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/5.linux%E4%B8%8Bcubeprogrammer%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../../stm32_cmake/5.linux%E4%B8%8Bcubeprogrammer%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   
@@ -2550,7 +2808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/6.stm32_ubuntu%E4%B8%8B%E7%83%A7%E5%BD%95/" class="md-nav__link">
+      <a href="../../../stm32_cmake/6.stm32_ubuntu%E4%B8%8B%E7%83%A7%E5%BD%95/" class="md-nav__link">
         
   
   
@@ -2573,7 +2831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/7.STM32_Programmer_CLI%20%E6%9B%B4%E5%A4%9A%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      <a href="../../../stm32_cmake/7.STM32_Programmer_CLI%20%E6%9B%B4%E5%A4%9A%E5%91%BD%E4%BB%A4/" class="md-nav__link">
         
   
   
@@ -2596,7 +2854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stm32_cmake/8.bootloader%E5%88%B6%E4%BD%9C/" class="md-nav__link">
+      <a href="../../../stm32_cmake/8.bootloader%E5%88%B6%E4%BD%9C/" class="md-nav__link">
         
   
   
@@ -2664,7 +2922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/1.github_pages%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E5%9F%9F%E5%90%8D/" class="md-nav__link">
+      <a href="../../../tools/1.github_pages%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E5%9F%9F%E5%90%8D/" class="md-nav__link">
         
   
   
@@ -2687,7 +2945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/10.BiliNote%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+      <a href="../../../tools/10.BiliNote%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/" class="md-nav__link">
         
   
   
@@ -2710,7 +2968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/11.cloudflare%E6%90%AD%E5%BB%BA%E4%B8%AD%E8%BD%AC%E8%8A%82%E7%82%B9/" class="md-nav__link">
+      <a href="../../../tools/11.cloudflare%E6%90%AD%E5%BB%BA%E4%B8%AD%E8%BD%AC%E8%8A%82%E7%82%B9/" class="md-nav__link">
         
   
   
@@ -2733,7 +2991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/12.%E6%89%AB%E6%8F%8F%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%8B%E7%9A%84%E5%BC%80%E6%94%BEip/" class="md-nav__link">
+      <a href="../../../tools/12.%E6%89%AB%E6%8F%8F%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%8B%E7%9A%84%E5%BC%80%E6%94%BEip/" class="md-nav__link">
         
   
   
@@ -2756,7 +3014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/13.socurce%20insight4.0.%E7%A0%B4%E8%A7%A3/" class="md-nav__link">
+      <a href="../../../tools/13.socurce%20insight4.0.%E7%A0%B4%E8%A7%A3/" class="md-nav__link">
         
   
   
@@ -2779,7 +3037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/14.iperf3%E6%B5%8B%E9%80%9F/" class="md-nav__link">
+      <a href="../../../tools/14.iperf3%E6%B5%8B%E9%80%9F/" class="md-nav__link">
         
   
   
@@ -2802,7 +3060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/15.github%E9%99%90%E5%88%B6%E7%BC%96%E8%AF%91%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%84%9A%E6%9C%AC/" class="md-nav__link">
+      <a href="../../../tools/15.github%E9%99%90%E5%88%B6%E7%BC%96%E8%AF%91%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E8%84%9A%E6%9C%AC/" class="md-nav__link">
         
   
   
@@ -2825,7 +3083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/16.github_commit_rss/" class="md-nav__link">
+      <a href="../../../tools/16.github_commit_rss/" class="md-nav__link">
         
   
   
@@ -2848,7 +3106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/17.ymodem_tools/" class="md-nav__link">
+      <a href="../../../tools/17.ymodem_tools/" class="md-nav__link">
         
   
   
@@ -2871,7 +3129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/18.%E5%8C%BB%E7%96%97%E5%99%A8%E6%A2%B0%E6%89%B9%E5%87%86%E6%B3%A8%E5%86%8C%E5%85%AC%E7%A4%BA/" class="md-nav__link">
+      <a href="../../../tools/18.%E5%8C%BB%E7%96%97%E5%99%A8%E6%A2%B0%E6%89%B9%E5%87%86%E6%B3%A8%E5%86%8C%E5%85%AC%E7%A4%BA/" class="md-nav__link">
         
   
   
@@ -2894,7 +3152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/19.%E8%8D%AF%E7%9B%91%E5%B1%80%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" class="md-nav__link">
+      <a href="../../../tools/19.%E8%8D%AF%E7%9B%91%E5%B1%80%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" class="md-nav__link">
         
   
   
@@ -2917,7 +3175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/2.%E8%A7%A3%E5%86%B3github%E6%8E%A8%E9%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/" class="md-nav__link">
+      <a href="../../../tools/2.%E8%A7%A3%E5%86%B3github%E6%8E%A8%E9%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88/" class="md-nav__link">
         
   
   
@@ -2940,7 +3198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/20.iSCSI%20%E5%9D%97%E5%AD%98%E5%82%A8/" class="md-nav__link">
+      <a href="../../../tools/20.iSCSI%20%E5%9D%97%E5%AD%98%E5%82%A8/" class="md-nav__link">
         
   
   
@@ -2963,7 +3221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/21.ntopng%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../../../tools/21.ntopng%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" class="md-nav__link">
         
   
   
@@ -2986,7 +3244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/22.vfs%E6%94%AF%E6%8C%81fafts%E4%B8%8Elitefs/" class="md-nav__link">
+      <a href="../../../tools/22.vfs%E6%94%AF%E6%8C%81fafts%E4%B8%8Elitefs/" class="md-nav__link">
         
   
   
@@ -3009,7 +3267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/23.ymodem%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+      <a href="../../../tools/23.ymodem%E5%B7%A5%E5%85%B7/" class="md-nav__link">
         
   
   
@@ -3032,7 +3290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/24.%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E4%B8%8E3xui%E9%9D%A2%E6%9D%BF%E5%85%B1%E5%AD%98/" class="md-nav__link">
+      <a href="../../../tools/24.%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E4%B8%8E3xui%E9%9D%A2%E6%9D%BF%E5%85%B1%E5%AD%98/" class="md-nav__link">
         
   
   
@@ -3055,7 +3313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/25.ubuntu%E5%AE%89%E8%A3%85yt-dlp%E6%9C%80%E6%96%B0%E7%89%88/" class="md-nav__link">
+      <a href="../../../tools/25.ubuntu%E5%AE%89%E8%A3%85yt-dlp%E6%9C%80%E6%96%B0%E7%89%88/" class="md-nav__link">
         
   
   
@@ -3078,7 +3336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/26.%E5%BC%80%E6%94%BEapi%E7%9A%84%E4%BA%91%E7%9B%98%E5%8E%82%E5%95%86/" class="md-nav__link">
+      <a href="../../../tools/26.%E5%BC%80%E6%94%BEapi%E7%9A%84%E4%BA%91%E7%9B%98%E5%8E%82%E5%95%86/" class="md-nav__link">
         
   
   
@@ -3101,7 +3359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/27.linux%E4%B8%8A%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E8%BD%BD/" class="md-nav__link">
+      <a href="../../../tools/27.linux%E4%B8%8A%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E8%BD%BD/" class="md-nav__link">
         
   
   
@@ -3124,7 +3382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/28.ffmpeg%E4%B8%B2%E6%B5%81/" class="md-nav__link">
+      <a href="../../../tools/28.ffmpeg%E4%B8%B2%E6%B5%81/" class="md-nav__link">
         
   
   
@@ -3147,7 +3405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/3.%E5%88%87%E9%99%A4git%E5%8E%86%E5%8F%B2/" class="md-nav__link">
+      <a href="../../../tools/3.%E5%88%87%E9%99%A4git%E5%8E%86%E5%8F%B2/" class="md-nav__link">
         
   
   
@@ -3170,7 +3428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/4.%E6%8B%86%E5%88%86pdf/" class="md-nav__link">
+      <a href="../../../tools/4.%E6%8B%86%E5%88%86pdf/" class="md-nav__link">
         
   
   
@@ -3193,7 +3451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/5.pdf%E8%BD%AChtml/" class="md-nav__link">
+      <a href="../../../tools/5.pdf%E8%BD%AChtml/" class="md-nav__link">
         
   
   
@@ -3216,7 +3474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/6.windows%E4%B8%8B%E5%AE%89%E8%A3%85tree/" class="md-nav__link">
+      <a href="../../../tools/6.windows%E4%B8%8B%E5%AE%89%E8%A3%85tree/" class="md-nav__link">
         
   
   
@@ -3239,7 +3497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/7.freerPDF%2CPDF%E7%BF%BB%E8%AF%91%E8%BD%AF%E4%BB%B6/" class="md-nav__link">
+      <a href="../../../tools/7.freerPDF%2CPDF%E7%BF%BB%E8%AF%91%E8%BD%AF%E4%BB%B6/" class="md-nav__link">
         
   
   
@@ -3262,7 +3520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/8.QQ%E9%82%AE%E4%BB%B6SMTP%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
+      <a href="../../../tools/8.QQ%E9%82%AE%E4%BB%B6SMTP%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
         
   
   
@@ -3285,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/9.edge-tts%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+      <a href="../../../tools/9.edge-tts%E6%B5%8B%E8%AF%95/" class="md-nav__link">
         
   
   
@@ -3353,7 +3611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../yolo/yolo%E5%AE%89%E8%A3%85/" class="md-nav__link">
+      <a href="../../../yolo/yolo%E5%AE%89%E8%A3%85/" class="md-nav__link">
         
   
   
@@ -3459,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/1.zephyr%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1.zephyr%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85-%E5%AE%98%E6%96%B9%E5%AE%89%E8%A3%85/" class="md-nav__link">
+      <a href="../../../zephyr/1.zephyr%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1.zephyr%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85-%E5%AE%98%E6%96%B9%E5%AE%89%E8%A3%85/" class="md-nav__link">
         
   
   
@@ -3482,7 +3740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/1.zephyr%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/2.zephyr%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85%E5%A5%BD%E7%9A%84%E5%8C%85%E7%9B%B4%E6%8E%A5%E8%A7%A3%E5%8E%8B%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../zephyr/1.zephyr%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/2.zephyr%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85%E5%A5%BD%E7%9A%84%E5%8C%85%E7%9B%B4%E6%8E%A5%E8%A7%A3%E5%8E%8B%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -3551,7 +3809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/2.zephyr%E5%88%9B%E5%BB%BAboards/3.zephyr%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84board_stm32h750xb/" class="md-nav__link">
+      <a href="../../../zephyr/2.zephyr%E5%88%9B%E5%BB%BAboards/3.zephyr%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84board_stm32h750xb/" class="md-nav__link">
         
   
   
@@ -3574,7 +3832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/2.zephyr%E5%88%9B%E5%BB%BAboards/4.zephyr%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84board%E8%BF%90%E8%A1%8C%E4%B8%8D%E8%B5%B7%E6%9D%A5%E8%A7%A3%E5%86%B3/" class="md-nav__link">
+      <a href="../../../zephyr/2.zephyr%E5%88%9B%E5%BB%BAboards/4.zephyr%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84board%E8%BF%90%E8%A1%8C%E4%B8%8D%E8%B5%B7%E6%9D%A5%E8%A7%A3%E5%86%B3/" class="md-nav__link">
         
   
   
@@ -3643,7 +3901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/10.linux%E4%B8%8Bcubeprogrammer%E5%AE%89%E8%A3%85%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/10.linux%E4%B8%8Bcubeprogrammer%E5%AE%89%E8%A3%85%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="md-nav__link">
         
   
   
@@ -3666,7 +3924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/11.linux%E4%B8%8Bcubeprogrammer%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/11.linux%E4%B8%8Bcubeprogrammer%E4%B8%8B%E8%BD%BD%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   
@@ -3689,7 +3947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/12.zephyr%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/12.zephyr%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4/" class="md-nav__link">
         
   
   
@@ -3712,7 +3970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/13.zephyr%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84board/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/13.zephyr%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84board/" class="md-nav__link">
         
   
   
@@ -3735,7 +3993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/14.ubuntu%E4%B8%8A%E6%9F%A5%E7%9C%8B%E4%B8%B2%E5%8F%A3%E4%BF%A1%E6%81%AF/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/14.ubuntu%E4%B8%8A%E6%9F%A5%E7%9C%8B%E4%B8%B2%E5%8F%A3%E4%BF%A1%E6%81%AF/" class="md-nav__link">
         
   
   
@@ -3758,7 +4016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/15.zephyr%E4%B8%AD%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E5%AE%8F%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/15.zephyr%E4%B8%AD%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E5%AE%8F%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE/" class="md-nav__link">
         
   
   
@@ -3781,7 +4039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/16.zephyr%E4%B8%AD%E6%88%91%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9F%90%E4%BA%9B%E6%A8%A1%E5%9D%97%E9%80%82%E7%94%A8%E4%BA%8E%E5%93%AA%E4%BA%9B%E5%85%B7%E4%BD%93%E5%9E%8B%E5%8F%B7%E5%8D%95%E7%89%87%E6%9C%BA/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/16.zephyr%E4%B8%AD%E6%88%91%E5%A6%82%E4%BD%95%E7%9F%A5%E9%81%93%E6%9F%90%E4%BA%9B%E6%A8%A1%E5%9D%97%E9%80%82%E7%94%A8%E4%BA%8E%E5%93%AA%E4%BA%9B%E5%85%B7%E4%BD%93%E5%9E%8B%E5%8F%B7%E5%8D%95%E7%89%87%E6%9C%BA/" class="md-nav__link">
         
   
   
@@ -3804,7 +4062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/17.zephyr%20espHosted%20wifi%E5%8D%8F%E5%A4%84%E7%90%86%E5%99%A8/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/17.zephyr%20espHosted%20wifi%E5%8D%8F%E5%A4%84%E7%90%86%E5%99%A8/" class="md-nav__link">
         
   
   
@@ -3827,7 +4085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/5.zephyr%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/5.zephyr%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" class="md-nav__link">
         
   
   
@@ -3850,7 +4108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/6.zephyr%E6%94%AF%E6%8C%81%E7%9A%84arm%E8%8A%AF%E7%89%87%E5%8E%82%E5%95%86/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/6.zephyr%E6%94%AF%E6%8C%81%E7%9A%84arm%E8%8A%AF%E7%89%87%E5%8E%82%E5%95%86/" class="md-nav__link">
         
   
   
@@ -3873,7 +4131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/7.zephyr%E9%A9%B1%E5%8A%A8%E6%A1%86%E6%9E%B6/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/7.zephyr%E9%A9%B1%E5%8A%A8%E6%A1%86%E6%9E%B6/" class="md-nav__link">
         
   
   
@@ -3896,7 +4154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/8.zephyr%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%90%E8%A1%8C/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/8.zephyr%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%BF%90%E8%A1%8C/" class="md-nav__link">
         
   
   
@@ -3919,7 +4177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/9.zephyr%E5%90%AF%E5%8A%A8%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+      <a href="../../../zephyr/3.zephyr%E9%80%9A%E7%94%A8%E5%9F%BA%E7%A1%80/9.zephyr%E5%90%AF%E5%8A%A8%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
         
   
   
@@ -3995,7 +4253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E5%85%88%E8%BE%91/%E5%85%88%E6%A5%AB%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+      <a href="../../../%E5%85%88%E8%BE%91/%E5%85%88%E6%A5%AB%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="md-nav__link">
         
   
   
@@ -4022,20 +4280,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20">
         
           
           <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
@@ -4051,7 +4307,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_20">
             <span class="md-nav__icon md-icon"></span>
             全志v853音视频开发
@@ -4062,17 +4318,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/1.%E5%BC%80%E5%8F%91%E6%9D%BF%E5%8F%B0%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
         
   
   
@@ -4083,7 +4332,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -4096,7 +4344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2.%E9%A9%B1%E5%8A%A8%E4%BB%A5%E5%8F%8A%E4%B8%8B%E8%BD%BD%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/2.%E9%A9%B1%E5%8A%A8%E4%BB%A5%E5%8F%8A%E4%B8%8B%E8%BD%BD%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/" class="md-nav__link">
         
   
   
@@ -4119,7 +4367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3.%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/3.%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -4142,7 +4390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.%E5%BC%80%E5%8F%91%E6%9D%BF%E9%85%8D%E7%BD%91/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/4.%E5%BC%80%E5%8F%91%E6%9D%BF%E9%85%8D%E7%BD%91/" class="md-nav__link">
         
   
   
@@ -4165,7 +4413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.adb%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/5.adb%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/" class="md-nav__link">
         
   
   
@@ -4188,7 +4436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6.%E5%BC%80%E5%8F%91%E6%9D%BF%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/6.%E5%BC%80%E5%8F%91%E6%9D%BF%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/" class="md-nav__link">
         
   
   
@@ -4211,7 +4459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7.sdk%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/7.sdk%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -4272,7 +4520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/1.%E5%8E%9F%E5%8E%82sdk%E7%BC%96%E8%AF%91/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/1.%E5%8E%9F%E5%8E%82sdk%E7%BC%96%E8%AF%91/" class="md-nav__link">
         
   
   
@@ -4295,7 +4543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/2.%E5%85%A8%E5%BF%97%E5%AE%98%E6%96%B9v853%E5%BC%80%E5%8F%91%E6%9D%BF%E4%B8%8E%E9%9F%A6%E4%B8%9C%E5%B1%B1v853%E7%A1%AC%E4%BB%B6%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/2.%E5%85%A8%E5%BF%97%E5%AE%98%E6%96%B9v853%E5%BC%80%E5%8F%91%E6%9D%BF%E4%B8%8E%E9%9F%A6%E4%B8%9C%E5%B1%B1v853%E7%A1%AC%E4%BB%B6%E5%AF%B9%E6%AF%94/" class="md-nav__link">
         
   
   
@@ -4318,7 +4566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/3.%E5%85%A8%E5%BF%97tina_sdk%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E7%9A%84board/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/3.%E5%85%A8%E5%BF%97tina_sdk%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E7%9A%84board/" class="md-nav__link">
         
   
   
@@ -4341,7 +4589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/4.%E5%85%A8%E5%BF%97tina_sdk%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/%E5%85%A8%E5%BF%97%E5%8E%9F%E5%8E%82sdk/4.%E5%85%A8%E5%BF%97tina_sdk%E7%9B%AE%E5%BD%95%E8%A7%A3%E6%9E%90/" class="md-nav__link">
         
   
   
@@ -4410,7 +4658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/1.%E4%BB%80%E4%B9%88%E6%98%AFYUV/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/1.%E4%BB%80%E4%B9%88%E6%98%AFYUV/" class="md-nav__link">
         
   
   
@@ -4433,7 +4681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/2.%E8%A7%86%E9%A2%91%E4%BC%A0%E8%BE%93%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+      <a href="../../../%E5%85%A8%E5%BF%97v853%E9%9F%B3%E8%A7%86%E9%A2%91%E5%BC%80%E5%8F%91/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/2.%E8%A7%86%E9%A2%91%E4%BC%A0%E8%BE%93%E6%B5%81%E7%A8%8B/" class="md-nav__link">
         
   
   
@@ -4509,7 +4757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%81%86%E6%80%9D%E7%A7%91%E6%8A%80/1.%E5%AE%98%E6%96%B9%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/" class="md-nav__link">
+      <a href="../../../%E8%81%86%E6%80%9D%E7%A7%91%E6%8A%80/1.%E5%AE%98%E6%96%B9%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/" class="md-nav__link">
         
   
   
@@ -4532,7 +4780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%81%86%E6%80%9D%E7%A7%91%E6%8A%80/2.%E8%81%86%E6%80%9D%E7%A7%91%E6%8A%80http-stack%20over%20flow/" class="md-nav__link">
+      <a href="../../../%E8%81%86%E6%80%9D%E7%A7%91%E6%8A%80/2.%E8%81%86%E6%80%9D%E7%A7%91%E6%8A%80http-stack%20over%20flow/" class="md-nav__link">
         
   
   
@@ -4600,7 +4848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/1.%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/" class="md-nav__link">
+      <a href="../../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/1.%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/" class="md-nav__link">
         
   
   
@@ -4623,7 +4871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/2.yt-dlp%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/2.yt-dlp%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -4646,7 +4894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/3.openai%20whisper%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/3.openai%20whisper%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -4669,7 +4917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/4.deepseek_api%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/4.deepseek_api%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   
@@ -4692,7 +4940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/5.markmap%E5%B7%A5%E5%85%B7markdown%E8%BD%AChtml%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" class="md-nav__link">
+      <a href="../../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/5.markmap%E5%B7%A5%E5%85%B7markdown%E8%BD%AChtml%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" class="md-nav__link">
         
   
   
@@ -4715,7 +4963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/6.project_link/" class="md-nav__link">
+      <a href="../../../%E8%A7%86%E9%A2%91%E6%80%BB%E7%BB%93%E6%96%B9%E6%A1%88/6.project_link/" class="md-nav__link">
         
   
   
@@ -4783,7 +5031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%A7%86%E9%A2%91%E7%BF%BB%E8%AF%91%E6%96%B9%E6%A1%88/A%E6%80%BB%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+      <a href="../../../%E8%A7%86%E9%A2%91%E7%BF%BB%E8%AF%91%E6%96%B9%E6%A1%88/A%E6%80%BB%E6%B5%81%E7%A8%8B/" class="md-nav__link">
         
   
   
@@ -4851,7 +5099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/1.rk3568-sdk%20%E7%BC%96%E8%AF%91/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/1.rk3568-sdk%20%E7%BC%96%E8%AF%91/" class="md-nav__link">
         
   
   
@@ -4874,7 +5122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/10.%E9%A9%B1%E5%8A%A8%E4%BC%A0%E5%8F%82%E7%90%86%E8%AE%BA/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/10.%E9%A9%B1%E5%8A%A8%E4%BC%A0%E5%8F%82%E7%90%86%E8%AE%BA/" class="md-nav__link">
         
   
   
@@ -4897,7 +5145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/11.%E5%86%85%E6%A0%B8%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/11.%E5%86%85%E6%A0%B8%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" class="md-nav__link">
         
   
   
@@ -4920,7 +5168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/11.%E9%A9%B1%E5%8A%A8%E4%BC%A0%E5%8F%82%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/11.%E9%A9%B1%E5%8A%A8%E4%BC%A0%E5%8F%82%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/" class="md-nav__link">
         
   
   
@@ -4943,7 +5191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/14.%E7%BC%96%E8%AF%91%E8%BF%9Blinux%E5%86%85%E6%A0%B8%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/14.%E7%BC%96%E8%AF%91%E8%BF%9Blinux%E5%86%85%E6%A0%B8%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/" class="md-nav__link">
         
   
   
@@ -4966,7 +5214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/15.%E8%AE%BE%E5%A4%87%E5%8F%B7%E7%9A%84%E6%A6%82%E5%BF%B5%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/15.%E8%AE%BE%E5%A4%87%E5%8F%B7%E7%9A%84%E6%A6%82%E5%BF%B5%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89/" class="md-nav__link">
         
   
   
@@ -4989,7 +5237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/16.%E8%AE%BE%E5%A4%87%E5%8F%B7%E5%AE%9E%E6%93%8D/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/16.%E8%AE%BE%E5%A4%87%E5%8F%B7%E5%AE%9E%E6%93%8D/" class="md-nav__link">
         
   
   
@@ -5012,7 +5260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/17.%E6%B3%A8%E5%86%8C%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/17.%E6%B3%A8%E5%86%8C%E5%AD%97%E7%AC%A6%E7%B1%BB%E8%AE%BE%E5%A4%87/" class="md-nav__link">
         
   
   
@@ -5035,7 +5283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/2.1%20usb%E8%BD%AC%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/2.1%20usb%E8%BD%AC%E4%B8%B2%E5%8F%A3%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/" class="md-nav__link">
         
   
   
@@ -5058,7 +5306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/2.%E9%95%9C%E5%83%8F%E7%83%A7%E5%86%99/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/2.%E9%95%9C%E5%83%8F%E7%83%A7%E5%86%99/" class="md-nav__link">
         
   
   
@@ -5081,7 +5329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/3.rk3568%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91-%E7%99%BD%E7%BA%B8%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/3.rk3568%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91-%E7%99%BD%E7%BA%B8%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C/" class="md-nav__link">
         
   
   
@@ -5104,7 +5352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/4.%E7%AC%AC%E4%B8%80%E4%B8%AAhello%E9%A9%B1%E5%8A%A8%28%E6%A8%A1%E5%9D%97%E6%96%B9%E5%BC%8F%29/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/4.%E7%AC%AC%E4%B8%80%E4%B8%AAhello%E9%A9%B1%E5%8A%A8%28%E6%A8%A1%E5%9D%97%E6%96%B9%E5%BC%8F%29/" class="md-nav__link">
         
   
   
@@ -5127,7 +5375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/5.%E5%A6%82%E4%BD%95%E4%BC%A0%E8%BE%93%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/5.%E5%A6%82%E4%BD%95%E4%BC%A0%E8%BE%93%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97/" class="md-nav__link">
         
   
   
@@ -5150,7 +5398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/6.%E5%8A%A0%E8%BD%BD%EF%BC%8C%E6%9F%A5%E7%9C%8B%EF%BC%8C%E5%8D%B8%E8%BD%BD%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/6.%E5%8A%A0%E8%BD%BD%EF%BC%8C%E6%9F%A5%E7%9C%8B%EF%BC%8C%E5%8D%B8%E8%BD%BD%E5%86%85%E6%A0%B8%E9%A9%B1%E5%8A%A8/" class="md-nav__link">
         
   
   
@@ -5173,7 +5421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/7.%E9%A9%B1%E5%8A%A8%E7%BC%96%E8%AF%91%E8%BF%9B%E5%86%85%E6%A0%B8/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/7.%E9%A9%B1%E5%8A%A8%E7%BC%96%E8%AF%91%E8%BF%9B%E5%86%85%E6%A0%B8/" class="md-nav__link">
         
   
   
@@ -5196,7 +5444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/8.kconfig%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/8.kconfig%E8%AF%AD%E6%B3%95/" class="md-nav__link">
         
   
   
@@ -5219,7 +5467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%BF%85%E4%B8%BA3568/9.%E5%B0%86hello%E9%A9%B1%E5%8A%A8%E7%BC%96%E8%AF%91%E8%BF%9B%E5%86%85%E6%A0%B8%E5%AE%9E%E6%93%8D/" class="md-nav__link">
+      <a href="../../../%E8%BF%85%E4%B8%BA3568/9.%E5%B0%86hello%E9%A9%B1%E5%8A%A8%E7%BC%96%E8%AF%91%E8%BF%9B%E5%86%85%E6%A0%B8%E5%AE%9E%E6%93%8D/" class="md-nav__link">
         
   
   
@@ -5259,6 +5507,223 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#armthumb" class="md-nav__link">
+    <span class="md-ellipsis">
+      arm指令集和Thumb指令集区别
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="arm指令集和Thumb指令集区别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键差异
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumb-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么 Thumb-2 成为主流
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#it" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件执行与 IT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态切换与互操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      编译器与选项
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aapcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      AAPCS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AAPCS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      是什么 &amp; 作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      适用范围
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      调用约定（核心规则）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      浮点变体（务必全工程一致）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据与布局（跨函数/库的一致性）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      变参函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumb-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      与 Thumb-2/函数指针
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      写汇编时的最小守则
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saturating-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      饱和算术 (saturating arithmetic)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      特权执行
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特权执行">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      核心概念（一句话版）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      这对系统/应用各自意味着什么
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cortex-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      在 Cortex-M 上会见到的落地
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要这样设计
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -5274,9 +5739,197 @@
 
 
 
-  <h1>1.开发板台介绍</h1>
-
-<p>使用韦东山全志v853开发板</p>
+<h1 id="arm">ARM黑话通识<a class="headerlink" href="#arm" title="Permanent link">¶</a></h1>
+<p>更多的arm文档参考  https://github.com/ARM-software/abi-aa/releases</p>
+<h2 id="armthumb">arm指令集和Thumb指令集区别<a class="headerlink" href="#armthumb" title="Permanent link">¶</a></h2>
+<p>ARM 指令集 vs Thumb（含 Thumb-2）指令集</p>
+<p><strong>一句话概括</strong>：</p>
+<ul>
+<li><strong>ARM(A32)</strong>：固定 <strong>32 位</strong>指令编码，指令齐全、每条指令可带条件码，代码体积大。</li>
+<li><strong>Thumb(T16/T32)</strong>：以 <strong>16 位</strong>为主（Thumb-1），在 <strong>Thumb-2</strong> 扩展到 <strong>混合 16/32 位</strong>，代码更紧凑，现代 M/R/A 内核基本都用 <strong>Thumb-2</strong> 作为默认/推荐模式。</li>
+</ul>
+<hr>
+<h3 id="_1">关键差异<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>ARM(A32)</th>
+<th>Thumb-1</th>
+<th>Thumb-2 (T32)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指令长度</td>
+<td>固定 32b</td>
+<td>固定 16b</td>
+<td>混合 16/32b</td>
+</tr>
+<tr>
+<td>代码密度</td>
+<td>较低</td>
+<td>最高</td>
+<td>高（接近 Thumb-1，且更强大）</td>
+</tr>
+<tr>
+<td>条件执行</td>
+<td>每条指令有条件码</td>
+<td>无</td>
+<td>通过 <strong>IT</strong> 指令成块条件执行（v8-M 对 IT 受限）</td>
+</tr>
+<tr>
+<td>可用寄存器</td>
+<td>r0–r15 全面</td>
+<td>早期多数只便捷用 r0–r7（高寄存器需特殊指令）</td>
+<td>基本等同 ARM，用法接近 A32</td>
+</tr>
+<tr>
+<td>指令完备度</td>
+<td>最全</td>
+<td>子集（缺少复杂寻址/乘累加/部分算术）</td>
+<td>几乎补齐 ARM 的功能（含复杂寻址、长立即数等）</td>
+</tr>
+<tr>
+<td>性能取向</td>
+<td>取决于内核/总线，取指带宽充足时强</td>
+<td>取指轻，功能受限</td>
+<td><strong>综合最佳</strong>：密度+功能+流水线友好</td>
+</tr>
+<tr>
+<td>适用内核</td>
+<td>传统 A/R（v7 时代常见）</td>
+<td>早期 M 内核</td>
+<td><strong>Cortex-M 全系仅支持 Thumb/Thumb-2</strong>；R/A 也广泛支持</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>对 <strong>Cortex-M（含 M7）</strong>：<strong>没有 ARM(A32) 状态</strong>，只能运行 <strong>Thumb-2（T32）</strong> 指令集。</p>
+</blockquote>
+<hr>
+<h3 id="thumb-2">为什么 Thumb-2 成为主流<a class="headerlink" href="#thumb-2" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>更小的代码＝更高的 I-Cache 命中＋更少的总线取指</strong>：在嵌入式 SoC（Flash XIP、窄指令总线）上直接转化为性能与能效。</li>
+<li><strong>功能几乎不打折</strong>：Thumb-2 通过 32 位“宽指令”补齐复杂寻址、长立即数、乘累加、饱和运算等。</li>
+<li><strong>可观测与实时</strong>：更高密度让关键路径更容易“装进” ITCM/I-Cache，减少抖动。</li>
+</ul>
+<hr>
+<h3 id="it">条件执行与 IT<a class="headerlink" href="#it" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>ARM(A32)</strong>：每条指令都有条件码（如 <code>ADDEQ</code>、<code>SUBNE</code>），无需分支就能“选择性执行”。</li>
+<li><strong>Thumb-2</strong>：用 <strong><code>IT</code> (If-Then)</strong> 封装 1–4 条后续指令的条件执行，减少分支；但在 <strong>ARMv8-M</strong> 上对复杂 IT 块有限制，编译器也会减少使用以利于预测。</li>
+</ul>
+<hr>
+<h3 id="_2">状态切换与互操作<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<ul>
+<li>早期 A/R 内核可在 <strong>ARM 与 Thumb</strong> 间切换（<code>BX</code>/<code>BLX</code>），函数指针最低位 <strong>bit0 = 1 表示 Thumb</strong>。</li>
+<li><strong>Cortex-M</strong> 只有 Thumb 状态，无需/不能切换到 ARM。</li>
+</ul>
+<hr>
+<h3 id="_3">编译器与选项<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Cortex-M7</strong>：</li>
+</ul>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>-mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16|fpv5-d16 -mfloat-abi=hard
+</span></code></pre></div></td></tr></tbody></table></div>
+<ul>
+<li><code>-mthumb</code>：必须；M 只支持 Thumb。</li>
+<li>
+<p>FPU 选项按是否双精度选择 <code>fpv5-d16</code>（双精）或 <code>fpv5-sp-d16</code>（单精）。</p>
+</li>
+<li>
+<p><strong>A/R 内核</strong>：可用 <code>-marm</code>（A32）或 <code>-mthumb</code>（T32）；现代多数情况下 <strong>-mthumb（Thumb-2）更优</strong>，除非极少数对 A32 有特定优化需求的场景。</p>
+</li>
+</ul>
+<h2 id="aapcs">AAPCS<a class="headerlink" href="#aapcs" title="Permanent link">¶</a></h2>
+<p><strong>Procedure Call Standard for the Arm Architecture (ARM架构的程序调用标准)</strong></p>
+<p>参考 https://github.com/ARM-software/abi-aa/blob/c51addc3dc03e73a016a1e4edf25440bcac76431/aapcs32/aapcs32.rst#abstract</p>
+<h3 id="_4">是什么 &amp; 作用<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>函数调用与二进制接口标准</strong>：规定参数/返回值如何传递、哪些寄存器需要保存、栈如何对齐、数据类型跨边界如何布局。</li>
+<li>目标：<strong>不同编译器/库/目标文件可互相链接与运行</strong>（ABI 兼容）。</li>
+</ul>
+<h3 id="_5">适用范围<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<ul>
+<li>用的 <strong>Cortex-M7（Armv7-M, Thumb-2/T32）</strong> 就遵循 <strong>AAPCS32</strong>。</li>
+<li>浮点传参有三种变体：<strong>soft / softfp / hard</strong>（见下）。</li>
+</ul>
+<h3 id="_6">调用约定（核心规则）<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>参数传递（整数/指针/标量）</strong>：前 4 个用 <code>r0–r3</code>，其余进栈；64 位标量占用成对寄存器（如 <code>r0:r1</code>）。</li>
+<li><strong>返回值</strong>：32 位用 <code>r0</code>；64 位用 <code>r0:r1</code>；大结构体通过 <strong>隐藏返回指针</strong>（caller 把缓冲区地址放 <code>r0</code>）。</li>
+<li><strong>寄存器保存义务</strong>：</li>
+<li><strong>callee-saved</strong>：<code>r4–r11</code>（以及硬浮点时的 <code>d8–d15</code> / <code>s16–s31</code>）</li>
+<li><strong>caller-saved</strong>：<code>r0–r3</code>, <code>r12</code>, <code>lr</code>（如不另行保存），以及硬浮点时的 <code>d0–d7</code> / <code>s0–s15</code></li>
+<li><code>sp</code> 必须始终有效并由被调函数恢复。</li>
+<li><strong>栈</strong>：向下增长，<strong>在任何公共接口处 <code>SP</code> 必须 8 字节对齐</strong>（影响变参函数与一些指令的对齐要求）。</li>
+</ul>
+<h3 id="_7">浮点变体（务必全工程一致）<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>hard</strong>：浮点参数优先走 <strong>VFP 寄存器</strong>（<code>s/d</code>），返回也在 <code>s0/d0</code>；<code>d8–d15</code> 需 callee 保存。</li>
+<li><strong>softfp</strong>：调用约定按整数寄存器/栈传参，但<strong>允许</strong>用硬件 FPU 计算（与 soft 二进制兼容）。</li>
+<li><strong>soft</strong>：完全按整数寄存器/栈传参与计算（无硬件 FPU 依赖）。</li>
+</ul>
+<blockquote>
+<p>编译/链接时必须让所有目标文件与库的 <strong>float-ABI 变体一致</strong>，否则链接或运行会出错。</p>
+</blockquote>
+<h3 id="_8">数据与布局（跨函数/库的一致性）<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<ul>
+<li>基本类型大小与对齐、<code>struct/union/bit-field</code> 的布局方式由 AAPCS 及其 <strong>Base Standard</strong> 统一规定。</li>
+<li><strong>HFA/HVA</strong>（同类浮点向量/聚合）在 <strong>hard</strong> 变体下可按 VFP 规则用浮点寄存器传递。</li>
+</ul>
+<h3 id="_9">变参函数<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<ul>
+<li>为保证可遍历所有实参，<strong>变参函数视作不使用浮点寄存器传参</strong>（即便是 hard 变体），相关参数走核心寄存器/栈，依赖 8 字节栈对齐。</li>
+</ul>
+<h3 id="thumb-2_1">与 Thumb-2/函数指针<a class="headerlink" href="#thumb-2_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>AArch32 下函数指针<strong>最低位为 1 表示 Thumb</strong>；Cortex-M 只有 Thumb 状态（不涉及 ARM/A32 切换）。</li>
+</ul>
+<h3 id="_10">写汇编时的最小守则<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<ul>
+<li>进入函数先<strong>保存需要的 callee-saved 寄存器</strong>，确保 <strong><code>SP</code> 8 字节对齐</strong>；退出前对称恢复。</li>
+<li>按所选 <strong>float-ABI</strong> 变体保存/恢复相应的 VFP 寄存器集合（若硬浮点且使用到）。</li>
+</ul>
+<h2 id="saturating-arithmetic">饱和算术 (saturating arithmetic)<a class="headerlink" href="#saturating-arithmetic" title="Permanent link">¶</a></h2>
+<p><strong>饱和算术</strong>：当运算结果超出数据类型可表示范围时，不按 2N2^N2N 回绕，而是被<strong>钳制</strong>到上下界（最大/最小值；部分指令同时置饱和标志 Q）。</p>
+<ul>
+<li><strong>普通整数溢出</strong>（按 2^N 取模）会“绕回去”。
+   比如 8 位有符号：<code>120 + 120 = 240</code>，按 8 位二补码会变成 <strong>-16</strong>（溢出 wrap-around）。</li>
+<li><strong>饱和算术</strong>不会绕回：结果被<strong>夹紧到可表示范围的上下界</strong>。
+   同例在 8 位有符号范围 [-128, 127] 内：<code>120 + 120</code> 被<strong>夹到 127</strong>；
+   8 位无符号范围 [0, 255] 内：<code>250 + 30</code> 被<strong>夹到 255</strong>。</li>
+</ul>
+<p>某些 ARM 指令是“带饱和”的；手册用 <code>SignedSat(Q)</code> / <code>UnsignedSat(Q)</code> 这类<strong>伪代码函数</strong>来精确定义“<strong>先算</strong> → <strong>再按 N 位上下界夹紧</strong>（并可报告是否饱和）”的行为。实际硬件上，发生饱和还会通过 <strong>Q 标志</strong>反映出来。</p>
+<h2 id="_11">特权执行<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
+<p><strong>Armv7-M 的“特权执行（privileged execution）”模型</strong>——也就是代码以哪种权限、在哪种模式下运行，以及应用如何向系统申请特权服务。</p>
+<h3 id="_12">核心概念（一句话版）<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Thread mode</strong>：应用正常运行的模式；<strong>复位后进入</strong>。它可以是<strong>特权</strong>或<strong>非特权</strong>。</li>
+<li><strong>Handler mode</strong>：所有<strong>异常/中断</strong>运行的模式；<strong>总是特权</strong>。</li>
+<li><strong>SVC（Supervisor Call）</strong>：非特权应用在 Thread 模式下，通过执行 <code>SVC</code> 触发 <strong>SVCall 异常</strong>，转到 Handler 模式由内核以特权身份代办系统服务。</li>
+</ul>
+<h3 id="_13">这对系统/应用各自意味着什么<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>系统（OS/内核/驱动）*<em>运行在*</em>特权</strong>下：能访问系统控制空间（SCB/NVIC/SysTick/MPU 等）、配置内存与外设、管理任务和栈。</li>
+<li><strong>应用</strong>通常运行在<strong>非特权</strong>下：</li>
+<li>OS 可以把资源分配为<strong>私有或共享</strong>，并用 <strong>MPU</strong> 做访问隔离。</li>
+<li>非特权应用<strong>不能</strong>直接改系统控制寄存器或越权访问受保护区域；需要时用 <strong>SVC</strong> 向内核请求。</li>
+<li><strong>即使在特权 Thread 模式</strong>，也可以选择用 <strong>SVC</strong> 走统一的系统调用路径，便于集中管理与审计。</li>
+</ul>
+<h3 id="cortex-m">在 Cortex-M 上会见到的落地<a class="headerlink" href="#cortex-m" title="Permanent link">¶</a></h3>
+<ul>
+<li>复位后进入 <strong>Thread mode（默认特权，使用 MSP）</strong>；OS 往往把普通任务切到<strong>非特权 + PSP</strong>。</li>
+<li>非特权任务要做系统事：执行 <code>SVC</code> → 进入 <strong>SVCall Handler（Handler 模式，特权）</strong> → 内核完成操作 → 异常返回到原任务。</li>
+<li>通过 <strong>CONTROL.nPRIV</strong> 位在 Thread 模式下区分特权/非特权；所有异常始终特权。</li>
+</ul>
+<h3 id="_14">为什么要这样设计<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>安全与健壮性</strong>：坏应用被隔离，不至于破坏内核或其它任务。</li>
+<li><strong>资源可控</strong>：OS 统一分配/回收资源，并通过 SVC 提供规范的系统接口。</li>
+</ul>
+<p>总结：<strong>特权执行</strong>是 Armv7-M 把“应用运行（Thread）”与“系统服务（Handler）”隔离的机制；应用一般非特权运行，遇到需要系统能力的场景，通过 <strong>SVC→SVCall</strong> 以特权方式由内核代办，从而实现资源隔离与系统安全。</p>
 
 
 
@@ -5338,10 +5991,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   
