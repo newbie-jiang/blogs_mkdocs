@@ -118,3 +118,10 @@ git push
 
 - **自定义域名**
    在 DNS 配置好 CNAME 解析到 `<user>.github.io`，工作流或 `gh-deploy` 写入 `cname:` 或 `--cname`。
+
+
+
+
+
+    - name: 写入 CNAME 文件
+        run: echo 'blogs.hedejiang.top' > blogs/CNAME
