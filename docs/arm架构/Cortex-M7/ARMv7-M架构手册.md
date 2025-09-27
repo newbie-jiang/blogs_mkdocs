@@ -1,4 +1,4 @@
-# ARMv7-M(cortexM7)架构手册
+# ARMv7-M架构手册
 
 **ARMv7-M Architecture Reference Manual**（架构手册）
 
