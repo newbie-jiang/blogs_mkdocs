@@ -14,11 +14,8 @@
         <link rel="next" href="../Cortex-M7%E9%80%9A%E7%94%A8%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
-      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
@@ -26,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -786,10 +783,25 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="饱和算术 (saturating arithmetic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用场景
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       特权执行
     </span>
@@ -799,7 +811,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       核心概念（一句话版）
     </span>
@@ -808,7 +820,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       这对系统/应用各自意味着什么
     </span>
@@ -826,7 +838,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     <span class="md-ellipsis">
       为什么要这样设计
     </span>
@@ -5670,10 +5682,25 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="饱和算术 (saturating arithmetic)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用场景
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       特权执行
     </span>
@@ -5683,7 +5710,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       核心概念（一句话版）
     </span>
@@ -5692,7 +5719,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     <span class="md-ellipsis">
       这对系统/应用各自意味着什么
     </span>
@@ -5710,7 +5737,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     <span class="md-ellipsis">
       为什么要这样设计
     </span>
@@ -5893,7 +5920,7 @@
 <li>按所选 <strong>float-ABI</strong> 变体保存/恢复相应的 VFP 寄存器集合（若硬浮点且使用到）。</li>
 </ul>
 <h2 id="saturating-arithmetic">饱和算术 (saturating arithmetic)<a class="headerlink" href="#saturating-arithmetic" title="Permanent link">¶</a></h2>
-<p><strong>饱和算术</strong>：当运算结果超出数据类型可表示范围时，不按 2N2^N2N 回绕，而是被<strong>钳制</strong>到上下界（最大/最小值；部分指令同时置饱和标志 Q）。</p>
+<p><strong>饱和算术</strong>：当运算结果超出数据类型可表示范围时，不按  2^N 回绕，而是被<strong>钳制</strong>到上下界（最大/最小值；部分指令同时置饱和标志 Q）。</p>
 <ul>
 <li><strong>普通整数溢出</strong>（按 2^N 取模）会“绕回去”。
    比如 8 位有符号：<code>120 + 120 = 240</code>，按 8 位二补码会变成 <strong>-16</strong>（溢出 wrap-around）。</li>
@@ -5902,15 +5929,38 @@
    8 位无符号范围 [0, 255] 内：<code>250 + 30</code> 被<strong>夹到 255</strong>。</li>
 </ul>
 <p>某些 ARM 指令是“带饱和”的；手册用 <code>SignedSat(Q)</code> / <code>UnsignedSat(Q)</code> 这类<strong>伪代码函数</strong>来精确定义“<strong>先算</strong> → <strong>再按 N 位上下界夹紧</strong>（并可报告是否饱和）”的行为。实际硬件上，发生饱和还会通过 <strong>Q 标志</strong>反映出来。</p>
-<h2 id="_11">特权执行<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
+<h3 id="_11">使用场景<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>音频DSP</strong>：16-bit/24-bit PCM 的混音、滤波累加、动态增益等——防止溢出回绕成巨大失真（剪裁而非回绕）。
+   例：<code>y = __SSAT(acc, 16); // 紧到[-32768,32767]</code></li>
+<li><strong>图像/视频像素运算</strong>：卷积、亮度/对比度、Alpha 混合、SAD/SSE 累加；对每个字节/半字做并行饱和（<code>QADD8/QADD16</code>）。
+   例：并行四像素加法不溢出到 &lt;0 或 &gt;255。</li>
+<li><strong>控制系统（PID 等）</strong>：</li>
+<li><strong>积分抗饱和</strong>：积分项/控制输出限幅，避免风up 与执行器饱和后振荡。</li>
+<li><strong>执行器命令限幅</strong>：PWM、阀门、力矩指令被限制在安全区间。</li>
+<li><strong>定点（Q15/Q31）算法</strong>：FIR/IIR、CORDIC、FFT 的乘加累加要饱和，保证数域稳定（M7 的“Q 指令族”就是为此准备的）。</li>
+<li><strong>通信与解码</strong>：Viterbi/Turbo/LDPC 的路径度量或 LLR 需饱和，避免极端值主导，提升数值稳定性；AGC/相关器累加同理。</li>
+<li><strong>量化神经网络（INT8/UINT8）</strong>：卷积/激活后把中间结果钳回量化区间（如 -128..127 或 0..255），避免溢出污染后续层。</li>
+<li><strong>安全/可靠场景</strong>：</li>
+<li><strong>饱和计数器</strong>（错误计数、速率限制）不回绕；</li>
+<li><strong>物理安全边界</strong>（例如给电机/泵的最大/最小剂量/速度）永不越界。</li>
+<li><strong>图形/游戏数值</strong>：位置/速度/颜色分量等限幅，防止坐标/颜色环回。</li>
+<li><strong>并行SIMD微优化</strong>：用 <code>QADD8/QSUB8/QASX/QSAX</code> 等对 4×8bit 或 2×16bit 数据做饱和矢量运算，既快又安全。</li>
+</ul>
+<p>小提示：</p>
+<ul>
+<li>发生饱和会置位 <strong>APSR.Q</strong>（“累计饱和”）。需要监控时读后记得清零；CMSIS 有 <code>__SSAT(x,n)</code>、<code>__USAT(x,n)</code>、<code>__QADD/ __QSUB</code> 等可直接用。</li>
+<li><strong>不适用的典型场景</strong>：需严格模 2N2^N2N 的算法（如多数密码学/CRC）应继续用“回绕”而<strong>不是</strong>饱和。</li>
+</ul>
+<h2 id="_12">特权执行<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>
 <p><strong>Armv7-M 的“特权执行（privileged execution）”模型</strong>——也就是代码以哪种权限、在哪种模式下运行，以及应用如何向系统申请特权服务。</p>
-<h3 id="_12">核心概念（一句话版）<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<h3 id="_13">核心概念（一句话版）<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Thread mode</strong>：应用正常运行的模式；<strong>复位后进入</strong>。它可以是<strong>特权</strong>或<strong>非特权</strong>。</li>
 <li><strong>Handler mode</strong>：所有<strong>异常/中断</strong>运行的模式；<strong>总是特权</strong>。</li>
 <li><strong>SVC（Supervisor Call）</strong>：非特权应用在 Thread 模式下，通过执行 <code>SVC</code> 触发 <strong>SVCall 异常</strong>，转到 Handler 模式由内核以特权身份代办系统服务。</li>
 </ul>
-<h3 id="_13">这对系统/应用各自意味着什么<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<h3 id="_14">这对系统/应用各自意味着什么<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>系统（OS/内核/驱动）*<em>运行在*</em>特权</strong>下：能访问系统控制空间（SCB/NVIC/SysTick/MPU 等）、配置内存与外设、管理任务和栈。</li>
 <li><strong>应用</strong>通常运行在<strong>非特权</strong>下：</li>
@@ -5924,7 +5974,7 @@
 <li>非特权任务要做系统事：执行 <code>SVC</code> → 进入 <strong>SVCall Handler（Handler 模式，特权）</strong> → 内核完成操作 → 异常返回到原任务。</li>
 <li>通过 <strong>CONTROL.nPRIV</strong> 位在 Thread 模式下区分特权/非特权；所有异常始终特权。</li>
 </ul>
-<h3 id="_14">为什么要这样设计<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<h3 id="_15">为什么要这样设计<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>安全与健壮性</strong>：坏应用被隔离，不至于破坏内核或其它任务。</li>
 <li><strong>资源可控</strong>：OS 统一分配/回收资源，并通过 SVC 提供规范的系统接口。</li>
@@ -5962,19 +6012,6 @@
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
-    </a>
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-    <a href="https://newbie-jiang.github.io/blogs_mkdocs/rss.xml" target="_blank" rel="noopener" title="订阅 RSS" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"></path></svg>
     </a>
   
 </div>
